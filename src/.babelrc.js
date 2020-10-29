@@ -9,14 +9,14 @@ module.exports = {
         targets: 'Node >= 10, > 0.5%, not OperaMini all, not dead',
         modules: process.env.BABEL_ESM ? false : 'cjs',
         shippedProposals: true,
-        loose: true
-      }
+        loose: true,
+      },
     ],
-    ['@babel/react', { useBuiltIns: true }]
+    ['@babel/react', { useBuiltIns: true }],
   ],
   plugins: [
     ['transform-async-to-promises', { inlineHelpers: true }],
     '@babel/transform-runtime',
-    'transform-require-extensions'
-  ]
+    'transform-require-extensions',
+  ],
 };

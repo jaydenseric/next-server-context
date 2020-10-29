@@ -14,6 +14,7 @@
 - Updated dependencies.
 - Also run GitHub Actions with Node.js v14 and v15, and not v13.
 - Configured Prettier option `semi` to the default, `true`.
+- Lint fixes.
 
 ## 1.0.0
 

@@ -19,7 +19,7 @@ import { ServerContextContext } from './ServerContextContext.mjs';
  * export default withServerContext(App);
  * ```
  */
-export const withServerContext = Component => {
+export const withServerContext = (Component) => {
   // No prop type checks as the props are not exposed to consumers.
   // eslint-disable-next-line react/prop-types
   const WithServerContext = ({ serverContext, ...props }) => (
@@ -29,11 +29,11 @@ export const withServerContext = Component => {
   );
 
   if (process.env.NODE_ENV !== 'production')
-    WithServerContext.displayName = `withServerContext(${Component.displayName ||
-      Component.name ||
-      'Component'})`;
+    WithServerContext.displayName = `withServerContext(${
+      Component.displayName || Component.name || 'Component'
+    })`;
 
-  WithServerContext.getInitialProps = async context => {
+  WithServerContext.getInitialProps = async (context) => {
     const isApp = 'ctx' in context;
     const { req, res } = isApp ? context.ctx : context;
     const props = Component.getInitialProps
@@ -49,7 +49,7 @@ export const withServerContext = Component => {
 
         // This prevents the server attempting to serialize the server context
         // object to JSON for hydration on the client.
-        toJSON: () => undefined
+        toJSON: () => undefined,
       };
 
     return props;

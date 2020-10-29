@@ -42,17 +42,17 @@ A React hook to access the [server context](#constant-servercontextcontext).
 _How React component that sets the Next.js page’s HTTP status code when server side rendered._
 
 > ```jsx
-> import { useServerContext } from 'next-server-context'
+> import { useServerContext } from 'next-server-context';
 >
 > export default function ErrorMissing() {
->   serverContext = useServerContext()
->   if (serverContext) serverContext.response.statusCode = 404
+>   serverContext = useServerContext();
+>   if (serverContext) serverContext.response.statusCode = 404;
 >   return (
 >     <section>
 >       <h1>Error 404</h1>
 >       <p>Something is missing.</p>
 >     </section>
->   )
+>   );
 > }
 > ```
 
@@ -75,10 +75,10 @@ _A custom `App`._
 > In `pages/_app.js`:
 >
 > ```jsx
-> import { withServerContext } from 'next-server-context'
-> import App from 'next/app'
+> import { withServerContext } from 'next-server-context';
+> import App from 'next/app';
 >
-> export default withServerContext(App)
+> export default withServerContext(App);
 > ```
 
 ---
@@ -99,7 +99,7 @@ _A custom `App`._
 _How to import._
 
 > ```js
-> import { ServerContextContext } from 'next-server-context'
+> import { ServerContextContext } from 'next-server-context';
 > ```
 
 ---

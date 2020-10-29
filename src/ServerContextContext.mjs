@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 /**
  * [React context object](https://reactjs.org/docs/context#api) for a
@@ -11,9 +11,9 @@ import React from 'react'
  * @prop {Function} Consumer [React context consumer component](https://reactjs.org/docs/context#contextconsumer).
  * @example <caption>How to import.</caption>
  * ```js
- * import { ServerContextContext } from 'next-server-context'
+ * import { ServerContextContext } from 'next-server-context';
  * ```
  */
-export const ServerContextContext = React.createContext()
+export const ServerContextContext = React.createContext();
 
-ServerContextContext.displayName = 'ServerContextContext'
+ServerContextContext.displayName = 'ServerContextContext';

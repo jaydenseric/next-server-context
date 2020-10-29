@@ -1,3 +1,3 @@
-import nextApp from 'next/app'
+import nextApp from 'next/app';
 
-export const App = nextApp.default
+export const App = nextApp.default;

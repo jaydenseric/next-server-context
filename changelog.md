@@ -15,6 +15,7 @@
 - Ensure GitHub Actions run on pull request.
 - Also run GitHub Actions with Node.js v14 and v15, and not v13.
 - Simplified the GitHub Actions CI config with the [`npm install-test`](https://docs.npmjs.com/cli/install-test.html) command.
+- Updated EditorConfig.
 - Configured Prettier option `semi` to the default, `true`.
 - Lint fixes.
 

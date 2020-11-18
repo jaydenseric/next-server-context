@@ -17,7 +17,12 @@
     "server",
     "context",
     "request",
-    "response"
+    "response",
+    "react",
+    "hooks",
+    "ssr",
+    "esm",
+    "mjs"
   ],
   "files": [
     "public"

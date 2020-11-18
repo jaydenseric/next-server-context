@@ -46,7 +46,7 @@ module.exports = function withServerContext(Component) {
     </ServerContextContext.Provider>
   );
 
-  if (process.env.NODE_ENV !== 'production')
+  if (typeof process === 'object' && process.env.NODE_ENV !== 'production')
     WithServerContext.displayName = `withServerContext(${
       Component.displayName || Component.name || 'Component'
     })`;

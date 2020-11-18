@@ -31,6 +31,7 @@
 - Lint fixes.
 - Fixed the `useServerContext` code example.
 - Documented all the ways to `import` and `require` the public API.
+- Allow `displayName` for React components to be eliminated in production builds.
 
 ## 1.0.0
 

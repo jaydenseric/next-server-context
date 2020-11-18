@@ -30,6 +30,7 @@ const React = require('react');
  */
 const ServerContextContext = React.createContext();
 
-ServerContextContext.displayName = 'ServerContextContext';
+if (typeof process === 'object' && process.env.NODE_ENV !== 'production')
+  ServerContextContext.displayName = 'ServerContextContext';
 
 module.exports = ServerContextContext;

@@ -2,11 +2,11 @@
   {
     "name": "ESM",
     "path": "public/index.mjs",
-    "limit": "550 B"
+    "limit": "1 KB"
   },
   {
     "name": "CJS",
     "path": "public/index.js",
-    "limit": "550 B"
+    "limit": "1 KB"
   }
 ]

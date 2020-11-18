@@ -45,7 +45,7 @@ _How React component that sets the Next.js page’s HTTP status code when server
 > import { useServerContext } from 'next-server-context';
 >
 > export default function ErrorMissing() {
->   serverContext = useServerContext();
+>   const serverContext = useServerContext();
 >   if (serverContext) serverContext.response.statusCode = 404;
 >   return (
 >     <section>

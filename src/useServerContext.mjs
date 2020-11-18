@@ -11,7 +11,7 @@ import { ServerContextContext } from './ServerContextContext.mjs';
  * import { useServerContext } from 'next-server-context';
  *
  * export default function ErrorMissing() {
- *   serverContext = useServerContext();
+ *   const serverContext = useServerContext();
  *   if (serverContext) serverContext.response.statusCode = 404;
  *   return (
  *     <section>

@@ -18,6 +18,7 @@
 - Updated EditorConfig.
 - Configured Prettier option `semi` to the default, `true`.
 - Lint fixes.
+- Fixed the `useServerContext` code example.
 
 ## 1.0.0
 

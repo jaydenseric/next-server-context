@@ -1,6 +1,8 @@
-import React from 'react';
-import { App } from '../workarounds/next-app.mjs';
-import { ServerContextContext } from './ServerContextContext.mjs';
+'use strict';
+
+const { default: NextApp } = require('next/app');
+const React = require('react');
+const ServerContextContext = require('./ServerContextContext');
 
 /**
  * A React higher-order component to decorate a Next.js custom `App` or page
@@ -9,6 +11,22 @@ import { ServerContextContext } from './ServerContextContext.mjs';
  * @name withServerContext
  * @param {object} Component Next.js custom `App` or page component.
  * @returns {WithServerContext} React higher-order component.
+ * @example <caption>Ways to `import`.</caption>
+ * ```js
+ * import { withServerContext } from 'next-server-context';
+ * ```
+ *
+ * ```js
+ * import withServerContext from 'next-server-context/public/withServerContext.js';
+ * ```
+ * @example <caption>Ways to `require`.</caption>
+ * ```js
+ * const { withServerContext } = require('next-server-context');
+ * ```
+ *
+ * ```js
+ * const withServerContext = require('next-server-context/public/withServerContext');
+ * ```
  * @example <caption>A custom `App`.</caption>
  * In `pages/_app.js`:
  *
@@ -19,7 +37,7 @@ import { ServerContextContext } from './ServerContextContext.mjs';
  * export default withServerContext(App);
  * ```
  */
-export const withServerContext = (Component) => {
+module.exports = function withServerContext(Component) {
   // No prop type checks as the props are not exposed to consumers.
   // eslint-disable-next-line react/prop-types
   const WithServerContext = ({ serverContext, ...props }) => (
@@ -39,7 +57,7 @@ export const withServerContext = (Component) => {
     const props = Component.getInitialProps
       ? await Component.getInitialProps(context)
       : isApp
-      ? await App.getInitialProps(context)
+      ? await NextApp.getInitialProps(context)
       : {};
 
     if (req)

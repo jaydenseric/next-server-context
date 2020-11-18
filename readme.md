@@ -39,6 +39,26 @@ A React hook to access the [server context](#constant-servercontextcontext).
 
 #### Examples
 
+_Ways to `import`._
+
+> ```js
+> import { useServerContext } from 'next-server-context';
+> ```
+>
+> ```js
+> import useServerContext from 'next-server-context/public/useServerContext.js';
+> ```
+
+_Ways to `require`._
+
+> ```js
+> const { useServerContext } = require('next-server-context');
+> ```
+>
+> ```js
+> const useServerContext = require('next-server-context/public/useServerContext');
+> ```
+
 _How React component that sets the Next.js page’s HTTP status code when server side rendered._
 
 > ```jsx
@@ -70,6 +90,26 @@ A React higher-order component to decorate a Next.js custom `App` or page compon
 
 #### Examples
 
+_Ways to `import`._
+
+> ```js
+> import { withServerContext } from 'next-server-context';
+> ```
+>
+> ```js
+> import withServerContext from 'next-server-context/public/withServerContext.js';
+> ```
+
+_Ways to `require`._
+
+> ```js
+> const { withServerContext } = require('next-server-context');
+> ```
+>
+> ```js
+> const withServerContext = require('next-server-context/public/withServerContext');
+> ```
+
 _A custom `App`._
 
 > In `pages/_app.js`:
@@ -96,10 +136,24 @@ _A custom `App`._
 
 #### Examples
 
-_How to import._
+_Ways to `import`._
 
 > ```js
 > import { ServerContextContext } from 'next-server-context';
+> ```
+>
+> ```js
+> import ServerContextContext from 'next-server-context/public/ServerContextContext.js';
+> ```
+
+_Ways to `require`._
+
+> ```js
+> const { ServerContextContext } = require('next-server-context');
+> ```
+>
+> ```js
+> const ServerContextContext = require('next-server-context/public/ServerContextContext');
 > ```
 
 ---

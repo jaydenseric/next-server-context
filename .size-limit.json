@@ -1,13 +1,13 @@
 [
   {
     "name": "ESM",
-    "path": "lib/index.mjs",
+    "path": "public/index.mjs",
     "limit": "550 B",
     "ignore": ["object-assign"]
   },
   {
     "name": "CJS",
-    "path": "lib/index.js",
+    "path": "public/index.js",
     "limit": "550 B",
     "ignore": ["object-assign"]
   }

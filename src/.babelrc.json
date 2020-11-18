@@ -1,0 +1,24 @@
+{
+  "comments": false,
+  "plugins": [
+    ["transform-async-to-promises", { "inlineHelpers": true }],
+    "@babel/transform-runtime"
+  ],
+  "presets": [
+    [
+      "@babel/env",
+      {
+        "modules": false,
+        "shippedProposals": true,
+        "loose": true
+      }
+    ],
+    "@babel/react"
+  ],
+  "overrides": [
+    {
+      "test": "**/*.js",
+      "sourceType": "script"
+    }
+  ]
+}

@@ -1,6 +1,8 @@
-export { ServerContextContext } from './ServerContextContext.mjs';
-export { useServerContext } from './useServerContext.mjs';
-export { withServerContext } from './withServerContext.mjs';
+'use strict';
+
+exports.ServerContextContext = require('./ServerContextContext');
+exports.useServerContext = require('./useServerContext');
+exports.withServerContext = require('./withServerContext');
 
 /**
  * Node.js HTTP server context.

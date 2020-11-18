@@ -2,12 +2,12 @@
 
 [![npm version](https://badgen.net/npm/v/next-server-context)](https://npm.im/next-server-context) [![CI status](https://github.com/jaydenseric/next-server-context/workflows/CI/badge.svg)](https://github.com/jaydenseric/next-server-context/actions)
 
-A [Next.js `App` or page decorator](#function-withservercontext), [React context object](#constant-servercontextcontext), and [React hook](#function-useservercontext) to access Node.js HTTP server context when rendering components.
+A [Next.js](https://nextjs.org) [`App` or page decorator](#function-withservercontext), [React context object](#constant-servercontextcontext), and [React hook](#function-useservercontext) to access Node.js HTTP server context when rendering components.
 
 Some uses:
 
 - Setting the HTTP response status code for the server side rendered page according to GraphQL query results in components.
-- Isomorphically access a cookie within components.
+- Isomorphically accessing cookies within components.
 
 ## Setup
 
@@ -16,6 +16,8 @@ To install from [npm](https://npmjs.com) run:
 ```sh
 npm install next-server-context
 ```
+
+Decorate either the entire Next.js app or individual pages using [`withServerContext`](#function-withservercontext) to be able to use the [`useServerContext`](#function-useservercontext) React hook.
 
 ## Support
 

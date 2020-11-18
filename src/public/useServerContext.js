@@ -24,7 +24,7 @@ const ServerContextContext = require('./ServerContextContext');
  * ```js
  * const useServerContext = require('next-server-context/public/useServerContext');
  * ```
- * @example <caption>How React component that sets the Next.js page’s HTTP status code when server side rendered.</caption>
+ * @example <caption>A React component that sets the Next.js page’s HTTP status code when server side rendered.</caption>
  * ```jsx
  * import { useServerContext } from 'next-server-context';
  *

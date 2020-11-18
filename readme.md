@@ -59,7 +59,7 @@ _Ways to `require`._
 > const useServerContext = require('next-server-context/public/useServerContext');
 > ```
 
-_How React component that sets the Next.js page’s HTTP status code when server side rendered._
+_A React component that sets the Next.js page’s HTTP status code when server side rendered._
 
 > ```jsx
 > import { useServerContext } from 'next-server-context';

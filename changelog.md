@@ -29,7 +29,7 @@
 - Updated test scripts.
 - Configured Prettier option `semi` to the default, `true`.
 - Lint fixes.
-- Fixed the `useServerContext` code example.
+- Fixed typos in `useServerContext` examples.
 - Documented all the ways to `import` and `require` the public API.
 - Allow `displayName` for React components to be eliminated in production builds.
 

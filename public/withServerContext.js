@@ -49,11 +49,12 @@ module.exports = function withServerContext(Component) {
    * @returns {ReactElement} [React](https://reactjs.org) virtual DOM element.
    * @ignore
    */
-  const WithServerContext = ({ serverContext, ...props }) =>
-    jsx(ServerContextContext.Provider, {
+  function WithServerContext({ serverContext, ...props }) {
+    return jsx(ServerContextContext.Provider, {
       value: serverContext,
       children: jsx(Component, props),
     });
+  }
 
   if (typeof process === 'object' && process.env.NODE_ENV !== 'production')
     /**

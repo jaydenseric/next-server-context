@@ -1,7 +1,7 @@
 'use strict';
 
 const React = require('react');
-const ServerContextContext = require('./ServerContextContext');
+const ServerContextContext = require('./ServerContextContext.js');
 
 /**
  * A React hook to access the [server context]{@link ServerContextContext}.

@@ -2,7 +2,7 @@
 
 const { default: NextApp } = require('next/app');
 const { jsx } = require('react/jsx-runtime');
-const ServerContextContext = require('./ServerContextContext');
+const ServerContextContext = require('./ServerContextContext.js');
 
 /**
  * A React higher-order component to decorate a Next.js custom `App` or page

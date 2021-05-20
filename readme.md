@@ -26,8 +26,6 @@ Decorate either the entire Next.js app or individual pages using [`withServerCon
 
 ## API
 
-### Table of contents
-
 - [function useServerContext](#function-useservercontext)
 - [function withServerContext](#function-withservercontext)
 - [constant ServerContextContext](#constant-servercontextcontext)

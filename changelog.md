@@ -6,6 +6,10 @@
 
 - Updated Node.js support to `^12.20 || >= 14.13`.
 - Updated browser support to the Browserslist query `> 0.5%, not OperaMini all, not IE > 0, not dead`.
+- Updated the [`react`](https://npm.im/react) peer dependency to `16.14 - 17`.
+- Use [the new React JSX runtime](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html).
+- Removed Babel related dev dependencies, config, and scripts. Published modules now contain more modern ES syntax.
+- Published modules now contain JSDoc comments, which might affect TypeScript projects.
 
 ### Patch
 

@@ -1,7 +1,7 @@
 'use strict';
 
 const { default: NextApp } = require('next/app');
-const React = require('react');
+const { jsx } = require('react/jsx-runtime');
 const ServerContextContext = require('./ServerContextContext');
 
 /**
@@ -38,13 +38,11 @@ const ServerContextContext = require('./ServerContextContext');
  * ```
  */
 module.exports = function withServerContext(Component) {
-  // No prop type checks as the props are not exposed to consumers.
-  // eslint-disable-next-line react/prop-types
-  const WithServerContext = ({ serverContext, ...props }) => (
-    <ServerContextContext.Provider value={serverContext}>
-      <Component {...props} />
-    </ServerContextContext.Provider>
-  );
+  const WithServerContext = ({ serverContext, ...props }) =>
+    jsx(ServerContextContext.Provider, {
+      value: serverContext,
+      children: jsx(Component, props),
+    });
 
   if (typeof process === 'object' && process.env.NODE_ENV !== 'production')
     WithServerContext.displayName = `withServerContext(${

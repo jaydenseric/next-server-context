@@ -9,6 +9,11 @@
 
 ### Patch
 
+- Updated GitHub Actions CI config:
+  - Run tests with Node.js v12, v14, v16.
+  - Updated `actions/checkout` to v2.
+  - Updated `actions/setup-node` to v2.
+  - Don’t specify the `CI` environment variable as it’s set by default.
 - Updated a URL in the v2.0.0 changelog entry.
 
 ## 2.0.0

@@ -5,12 +5,13 @@ const { jsx } = require('react/jsx-runtime');
 const ServerContextContext = require('./ServerContextContext.js');
 
 /**
- * A React higher-order component to decorate a Next.js custom `App` or page
- * component, to [provide server context]{@link ServerContextContext}.
+ * A higher-order [React](https://reactjs.org) component to decorate a
+ * [Next.js](https://nextjs.org) custom `App` or page component, to provide
+ * [server context]{@link ServerContextContext}.
  * @kind function
  * @name withServerContext
- * @param {object} Component Next.js custom `App` or page component.
- * @returns {WithServerContext} React higher-order component.
+ * @param {object} Component [Next.js](https://nextjs.org) custom `App` or page component.
+ * @returns {WithServerContext} Higher-order [React](https://reactjs.org) component.
  * @example <caption>Ways to `import`.</caption>
  * ```js
  * import { withServerContext } from 'next-server-context';
@@ -27,7 +28,7 @@ const ServerContextContext = require('./ServerContextContext.js');
  * ```js
  * const withServerContext = require('next-server-context/public/withServerContext.js');
  * ```
- * @example <caption>A custom `App`.</caption>
+ * @example <caption>A [Next.js](https://nextjs.org) custom `App`.</caption>
  * In `pages/_app.js`:
  *
  * ```jsx
@@ -38,6 +39,16 @@ const ServerContextContext = require('./ServerContextContext.js');
  * ```
  */
 module.exports = function withServerContext(Component) {
+  /**
+   * [Next.js](https://nextjs.org) custom `App` or page higher-order
+   * [React](https://reactjs.org) component.
+   * @kind function
+   * @name withServerContext~WithServerContext
+   * @param {object} props Props.
+   * @param {ServerContext} [props.serverContext] [Node.js](https://nodejs.org) HTTP server context.
+   * @returns {ReactElement} [React](https://reactjs.org) virtual DOM element.
+   * @ignore
+   */
   const WithServerContext = ({ serverContext, ...props }) =>
     jsx(ServerContextContext.Provider, {
       value: serverContext,
@@ -45,6 +56,14 @@ module.exports = function withServerContext(Component) {
     });
 
   if (typeof process === 'object' && process.env.NODE_ENV !== 'production')
+    /**
+     * The display name.
+     * @kind member
+     * @name withServerContext~WithServerContext.displayName
+     * @type {string}
+     * @see [React display name conventions](https://reactjs.org/docs/higher-order-components.html#convention-wrap-the-display-name-for-easy-debugging).
+     * @ignore
+     */
     WithServerContext.displayName = `withServerContext(${
       Component.displayName || Component.name || 'Component'
     })`;

@@ -5,7 +5,7 @@ exports.useServerContext = require('./useServerContext.js');
 exports.withServerContext = require('./withServerContext.js');
 
 /**
- * Node.js HTTP server context.
+ * [Node.js](https://nodejs.org) HTTP server context.
  * @kind typedef
  * @name ServerContext
  * @type {object}

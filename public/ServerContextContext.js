@@ -31,6 +31,14 @@ const React = require('react');
 const ServerContextContext = React.createContext();
 
 if (typeof process === 'object' && process.env.NODE_ENV !== 'production')
+  /**
+   * The display name.
+   * @kind member
+   * @name ServerContextContext.displayName
+   * @type {string}
+   * @see [React display name conventions](https://reactjs.org/docs/higher-order-components.html#convention-wrap-the-display-name-for-easy-debugging).
+   * @ignore
+   */
   ServerContextContext.displayName = 'ServerContextContext';
 
 module.exports = ServerContextContext;

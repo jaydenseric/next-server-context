@@ -26,6 +26,7 @@
 - Test the bundle size manually using [`esbuild`](https://npm.im/esbuild) and [`gzip-size`](https://npm.im/gzip-size), removing [`size-limit`](https://npm.im/size-limit) related dev dependencies, config, and scripts.
 - Use the `.js` file extension in internal `require` paths.
 - Removed `npm-debug.log` from the `.gitignore` file as npm [v4.2.0](https://github.com/npm/npm/releases/tag/v4.2.0)+ doesn’t create it in the current working directory.
+- Improved documentation.
 - Updated a URL in the v2.0.0 changelog entry.
 
 ## 2.0.0

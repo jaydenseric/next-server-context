@@ -6,18 +6,18 @@ A [Next.js](https://nextjs.org) [`App` or page decorator](#function-withserverco
 
 Some uses:
 
-- Setting the HTTP response status code for the server side rendered page according to GraphQL query results in components.
+- Setting the HTTP response status code for the server side rendered page according to [GraphQL](https://graphql.org) query results in components.
 - Isomorphically accessing cookies within components.
 
 ## Setup
 
-To install from [npm](https://npmjs.com) run:
+To install with [npm](https://npmjs.com/get-npm), run:
 
 ```sh
 npm install next-server-context
 ```
 
-Decorate either the entire Next.js app or individual pages using [`withServerContext`](#function-withservercontext) to be able to use the [`useServerContext`](#function-useservercontext) React hook.
+Decorate either the entire [Next.js](https://nextjs.org) app or individual pages using [`withServerContext`](#function-withservercontext) to be able to use the [`useServerContext`](#function-useservercontext) [React](https://reactjs.org) hook.
 
 ## Support
 
@@ -33,9 +33,9 @@ Decorate either the entire Next.js app or individual pages using [`withServerCon
 
 ### function useServerContext
 
-A React hook to access the [server context](#constant-servercontextcontext).
+A [React](https://reactjs.org) hook to access the [server context](#constant-servercontextcontext).
 
-**Returns:** [ServerContext](#type-servercontext) | `undefined` — Node.js HTTP server context, or `undefined` if client rendering.
+**Returns:** [ServerContext](#type-servercontext) | `undefined` — [Node.js](https://nodejs.org) HTTP server context, or `undefined` if client rendering.
 
 #### Examples
 
@@ -59,7 +59,7 @@ _Ways to `require`._
 > const useServerContext = require('next-server-context/public/useServerContext.js');
 > ```
 
-_A React component that sets the Next.js page’s HTTP status code when server side rendered._
+_A [React](https://reactjs.org) component that sets the [Next.js](https://nextjs.org) page’s HTTP status code when server side rendered._
 
 > ```jsx
 > import { useServerContext } from 'next-server-context';
@@ -80,13 +80,13 @@ _A React component that sets the Next.js page’s HTTP status code when server s
 
 ### function withServerContext
 
-A React higher-order component to decorate a Next.js custom `App` or page component, to [provide server context](#constant-servercontextcontext).
+A higher-order [React](https://reactjs.org) component to decorate a [Next.js](https://nextjs.org) custom `App` or page component, to provide [server context](#constant-servercontextcontext).
 
-| Parameter   | Type   | Description                             |
-| :---------- | :----- | :-------------------------------------- |
-| `Component` | object | Next.js custom `App` or page component. |
+| Parameter | Type | Description |
+| :-- | :-- | :-- |
+| `Component` | object | [Next.js](https://nextjs.org) custom `App` or page component. |
 
-**Returns:** WithServerContext — React higher-order component.
+**Returns:** WithServerContext — Higher-order [React](https://reactjs.org) component.
 
 #### Examples
 
@@ -110,7 +110,7 @@ _Ways to `require`._
 > const withServerContext = require('next-server-context/public/withServerContext.js');
 > ```
 
-_A custom `App`._
+_A [Next.js](https://nextjs.org) custom `App`._
 
 > In `pages/_app.js`:
 >
@@ -160,7 +160,7 @@ _Ways to `require`._
 
 ### type ServerContext
 
-Node.js HTTP server context.
+[Node.js](https://nodejs.org) HTTP server context.
 
 **Type:** object
 

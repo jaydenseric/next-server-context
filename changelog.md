@@ -1,5 +1,11 @@
 # next-server-context changelog
 
+## Next
+
+### Patch
+
+- Updated a URL in the v2.0.0 changelog entry.
+
 ## 2.0.0
 
 ### Major
@@ -18,7 +24,7 @@
 - Updated the package `keywords` field.
 - Ensure GitHub Actions run on pull request.
 - Also run GitHub Actions with Node.js v14 and v15, and not v13.
-- Simplified the GitHub Actions CI config with the [`npm install-test`](https://docs.npmjs.com/cli/install-test.html) command.
+- Simplified the GitHub Actions CI config with the [`npm install-test`](https://docs.npmjs.com/cli/v7/commands/npm-install-test) command.
 - Updated EditorConfig.
 - Simplified the Babel config and scripts:
   - Removed the [`babel-plugin-transform-require-extensions`](https://npm.im/babel-plugin-transform-require-extensions) dev dependency.

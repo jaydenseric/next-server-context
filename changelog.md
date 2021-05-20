@@ -2,6 +2,11 @@
 
 ## Next
 
+### Major
+
+- Updated Node.js support to `^12.20 || >= 14.13`.
+- Updated browser support to the Browserslist query `> 0.5%, not OperaMini all, not IE > 0, not dead`.
+
 ### Patch
 
 - Updated a URL in the v2.0.0 changelog entry.

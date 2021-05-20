@@ -56,7 +56,7 @@ _Ways to `require`._
 > ```
 >
 > ```js
-> const useServerContext = require('next-server-context/public/useServerContext');
+> const useServerContext = require('next-server-context/public/useServerContext.js');
 > ```
 
 _A React component that sets the Next.js page’s HTTP status code when server side rendered._
@@ -107,7 +107,7 @@ _Ways to `require`._
 > ```
 >
 > ```js
-> const withServerContext = require('next-server-context/public/withServerContext');
+> const withServerContext = require('next-server-context/public/withServerContext.js');
 > ```
 
 _A custom `App`._
@@ -153,7 +153,7 @@ _Ways to `require`._
 > ```
 >
 > ```js
-> const ServerContextContext = require('next-server-context/public/ServerContextContext');
+> const ServerContextContext = require('next-server-context/public/ServerContextContext.js');
 > ```
 
 ---

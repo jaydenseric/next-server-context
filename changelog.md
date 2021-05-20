@@ -8,6 +8,7 @@
 - Updated browser support to the Browserslist query `> 0.5%, not OperaMini all, not IE > 0, not dead`.
 - Updated the [`react`](https://npm.im/react) peer dependency to `16.14 - 17`.
 - Updated dev dependencies, some of which require newer Node.js versions than were previously supported.
+- Replaced the the `package.json` `exports` field public [subpath folder mapping](https://nodejs.org/api/packages.html#packages_subpath_folder_mappings) (deprecated by Node.js) with a [subpath pattern](https://nodejs.org/api/packages.html#packages_subpath_patterns). Deep `require` paths within `next-server-context/public/` must now include the `.js` file extension.
 - Use [the new React JSX runtime](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html).
 - Removed Babel related dev dependencies, config, and scripts. Published modules now contain more modern ES syntax.
 - Published modules now contain JSDoc comments, which might affect TypeScript projects.

@@ -22,7 +22,7 @@ const ServerContextContext = require('./ServerContextContext');
  * ```
  *
  * ```js
- * const useServerContext = require('next-server-context/public/useServerContext');
+ * const useServerContext = require('next-server-context/public/useServerContext.js');
  * ```
  * @example <caption>A React component that sets the Next.js page’s HTTP status code when server side rendered.</caption>
  * ```jsx

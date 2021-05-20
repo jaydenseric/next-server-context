@@ -25,7 +25,7 @@ const ServerContextContext = require('./ServerContextContext');
  * ```
  *
  * ```js
- * const withServerContext = require('next-server-context/public/withServerContext');
+ * const withServerContext = require('next-server-context/public/withServerContext.js');
  * ```
  * @example <caption>A custom `App`.</caption>
  * In `pages/_app.js`:

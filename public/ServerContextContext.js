@@ -25,7 +25,7 @@ const React = require('react');
  * ```
  *
  * ```js
- * const ServerContextContext = require('next-server-context/public/ServerContextContext');
+ * const ServerContextContext = require('next-server-context/public/ServerContextContext.js');
  * ```
  */
 const ServerContextContext = React.createContext();

@@ -63,8 +63,10 @@
     "gzip-size": "^6.0.0",
     "jsdoc-md": "^11.0.0",
     "next": "^10.2.2",
+    "node-fetch": "^2.6.1",
     "prettier": "^2.3.0",
     "react": "^17.0.2",
+    "react-dom": "^17.0.2",
     "react-test-renderer": "^17.0.2",
     "test-director": "^6.0.0"
   },
@@ -74,7 +76,7 @@
     "test:eslint": "eslint --ext mjs,js .",
     "test:prettier": "prettier -c .",
     "test:jsdoc": "jsdoc-md -c",
-    "test:api": "coverage-node test/index.mjs",
+    "test:api": "NEXT_TELEMETRY_DISABLED=1 coverage-node test/index.mjs",
     "prepublishOnly": "npm test"
   }
 }

@@ -1,3 +1,13 @@
 {
-  "extends": ["env"]
+  "extends": ["env"],
+  "overrides": [
+    {
+      "files": ["test/fixtures/**/*.js"],
+      "rules": {
+        "jsdoc/require-jsdoc": "off",
+        "react/prop-types": "off",
+        "react/react-in-jsx-scope": "off"
+      }
+    }
+  ]
 }

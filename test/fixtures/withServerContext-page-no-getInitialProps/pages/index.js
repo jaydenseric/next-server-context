@@ -6,9 +6,14 @@ const withServerContext = require('../../../../public/withServerContext.js');
 function IndexPage() {
   const serverContext = useServerContext();
 
-  if (serverContext) serverContext.response.statusCode = 403;
+  let requestCustomHeader = null;
 
-  return null;
+  if (serverContext) {
+    requestCustomHeader = serverContext.request.headers['custom-header'];
+    serverContext.response.statusCode = 418;
+  }
+
+  return requestCustomHeader;
 }
 
 module.exports = withServerContext(IndexPage);

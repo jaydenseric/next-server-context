@@ -24,9 +24,18 @@ export default (tests) => {
         const { port, close } = await startNext(nextProjectPath);
 
         try {
-          const response = await fetch(`http://localhost:${port}`);
+          const customHeaderValue = 'custom-header_value';
+          const response = await fetch(`http://localhost:${port}`, {
+            headers: {
+              'custom-header': customHeaderValue,
+            },
+          });
 
-          strictEqual(response.status, 403);
+          strictEqual(response.status, 418);
+
+          const html = await response.text();
+
+          strictEqual(html.includes(customHeaderValue), true);
         } finally {
           close();
         }
@@ -54,12 +63,18 @@ export default (tests) => {
         const { port, close } = await startNext(nextProjectPath);
 
         try {
-          const response = await fetch(`http://localhost:${port}`);
+          const customHeaderValue = 'custom-header_value';
+          const response = await fetch(`http://localhost:${port}`, {
+            headers: {
+              'custom-header': customHeaderValue,
+            },
+          });
 
-          strictEqual(response.status, 403);
+          strictEqual(response.status, 418);
 
           const html = await response.text();
 
+          strictEqual(html.includes(customHeaderValue), true);
           strictEqual(html.includes('appCustomProp_value'), true);
           strictEqual(html.includes('pageCustomProp_value'), true);
         } finally {
@@ -89,9 +104,18 @@ export default (tests) => {
         const { port, close } = await startNext(nextProjectPath);
 
         try {
-          const response = await fetch(`http://localhost:${port}`);
+          const customHeaderValue = 'custom-header_value';
+          const response = await fetch(`http://localhost:${port}`, {
+            headers: {
+              'custom-header': customHeaderValue,
+            },
+          });
 
-          strictEqual(response.status, 403);
+          strictEqual(response.status, 418);
+
+          const html = await response.text();
+
+          strictEqual(html.includes(customHeaderValue), true);
         } finally {
           close();
         }
@@ -119,12 +143,18 @@ export default (tests) => {
         const { port, close } = await startNext(nextProjectPath);
 
         try {
-          const response = await fetch(`http://localhost:${port}`);
+          const customHeaderValue = 'custom-header_value';
+          const response = await fetch(`http://localhost:${port}`, {
+            headers: {
+              'custom-header': customHeaderValue,
+            },
+          });
 
-          strictEqual(response.status, 403);
+          strictEqual(response.status, 418);
 
           const html = await response.text();
 
+          strictEqual(html.includes(customHeaderValue), true);
           strictEqual(html.includes('pageCustomProp_value'), true);
         } finally {
           close();

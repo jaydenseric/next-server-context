@@ -6,9 +6,14 @@ const withServerContext = require('../../../../public/withServerContext.js');
 function IndexPage({ pageCustomProp }) {
   const serverContext = useServerContext();
 
-  if (serverContext) serverContext.response.statusCode = 403;
+  let requestCustomHeader = null;
 
-  return pageCustomProp;
+  if (serverContext) {
+    requestCustomHeader = serverContext.request.headers['custom-header'];
+    serverContext.response.statusCode = 418;
+  }
+
+  return `${requestCustomHeader} ${pageCustomProp}`;
 }
 
 IndexPage.getInitialProps = async () => ({

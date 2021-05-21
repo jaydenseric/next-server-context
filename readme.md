@@ -2,7 +2,7 @@
 
 [![npm version](https://badgen.net/npm/v/next-server-context)](https://npm.im/next-server-context) [![CI status](https://github.com/jaydenseric/next-server-context/workflows/CI/badge.svg)](https://github.com/jaydenseric/next-server-context/actions)
 
-A [Next.js](https://nextjs.org) [`App` or page decorator](#function-withservercontext), [React context object](#constant-servercontextcontext), and [React hook](#function-useservercontext) to access Node.js HTTP server context when rendering components.
+A [Next.js](https://nextjs.org) [`App` or page decorator](#function-withservercontext), [React context object](#constant-servercontextcontext), and [React hook](#function-useservercontext) to access [Node.js](https://nodejs.org) HTTP server context when rendering components.
 
 Some uses:
 

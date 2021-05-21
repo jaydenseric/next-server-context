@@ -12,7 +12,7 @@
 - Use [the new React JSX runtime](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html).
 - Removed Babel related dev dependencies, config, and scripts. Published modules now contain more modern ES syntax.
 - Published modules now contain JSDoc comments, which might affect TypeScript projects.
-- Added a package `test:api` script, using ESM in `.mjs` files and [`test-director`](https://npm.im/test-director).
+- Added a package `test:api` script to test the API, using ESM in `.mjs` files.
 
 ### Patch
 

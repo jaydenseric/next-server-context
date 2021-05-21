@@ -32,7 +32,7 @@ const ServerContextContext = require('./ServerContextContext.js');
  * In `pages/_app.js`:
  *
  * ```jsx
- * import { withServerContext } from 'next-server-context';
+ * import withServerContext from 'next-server-context/public/withServerContext.js';
  * import App from 'next/app';
  *
  * export default withServerContext(App);

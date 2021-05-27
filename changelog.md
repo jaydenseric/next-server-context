@@ -6,6 +6,7 @@
 
 - Updated dev dependencies.
 - Renamed variables in the test index module.
+- Amended the changelog entry for v3.0.0.
 
 ## 3.0.0
 
@@ -19,7 +20,12 @@
 - Use [the new React JSX runtime](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html).
 - Removed Babel related dev dependencies, config, and scripts. Published modules now contain more modern ES syntax.
 - Published modules now contain JSDoc comments, which might affect TypeScript projects.
-- Added a package `test:api` script to test the API, using ESM in `.mjs` files.
+- Added a package `test:api` script to test the API, using ESM in `.mjs` files and new dev dependencies:
+  - [`@testing-library/react-hooks`](https://npm.im/@testing-library/react-hooks)
+  - [`coverage-node`](https://npm.im/coverage-node)
+  - [`node-fetch`](https://npm.im/node-fetch)
+  - [`react-test-renderer`](https://npm.im/react-test-renderer)
+  - [`test-director`](https://npm.im/test-director)
 
 ### Patch
 
@@ -36,6 +42,7 @@
 - Removed `npm-debug.log` from the `.gitignore` file as npm [v4.2.0](https://github.com/npm/npm/releases/tag/v4.2.0)+ doesn’t create it in the current working directory.
 - Improved documentation.
 - Updated a URL in the v2.0.0 changelog entry.
+- The file `changelog.md` is no longer published.
 
 ## 2.0.0
 

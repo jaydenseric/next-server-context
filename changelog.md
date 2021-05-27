@@ -5,7 +5,7 @@
 ### Patch
 
 - Updated dev dependencies.
-- Renamed variables in the test index module.
+- Renamed imports in the test index module.
 - Amended the changelog entry for v3.0.0.
 
 ## 3.0.0

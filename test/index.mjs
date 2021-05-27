@@ -1,14 +1,14 @@
 import TestDirector from 'test-director';
-import testBundle from './bundle.test.mjs';
-import testServerContextContext from './public/ServerContextContext.test.mjs';
-import testUseServerContext from './public/useServerContext.test.mjs';
-import testWithServerContext from './public/withServerContext.test.mjs';
+import test_bundle from './bundle.test.mjs';
+import test_ServerContextContext from './public/ServerContextContext.test.mjs';
+import test_useServerContext from './public/useServerContext.test.mjs';
+import test_withServerContext from './public/withServerContext.test.mjs';
 
 const tests = new TestDirector();
 
-testServerContextContext(tests);
-testUseServerContext(tests);
-testWithServerContext(tests);
-testBundle(tests);
+test_ServerContextContext(tests);
+test_useServerContext(tests);
+test_withServerContext(tests);
+test_bundle(tests);
 
 tests.run();

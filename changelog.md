@@ -8,7 +8,7 @@
 - Updated dev dependencies.
 - Added the [`eslint-config-next`](https://npm.im/eslint-config-next) dev dependency for [`next`](https://npm.im/next) v11.
 - Renamed imports in the test index module.
-- Amended the changelog entry for v3.0.0.
+- Amended the changelog entries for v2.0.0 and v3.0.0.
 
 ## 3.0.0
 
@@ -57,7 +57,7 @@
 
 ### Patch
 
-- Update the [`next`](https://npm.im/next) peer dependency to `9.0.3 - 10`.
+- Updated the [`next`](https://npm.im/next) peer dependency to `9.0.3 - 10`.
 - Updated the [`react`](https://npm.im/react) peer dependency to `16.8 - 17`.
 - Updated dependencies.
 - Removed the redundant [`object-assign`](https://npm.im/object-assign) dependency and related [`size-limit`](https://npm.im/size-limit) config.

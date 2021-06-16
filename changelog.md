@@ -4,7 +4,9 @@
 
 ### Patch
 
+- Updated the [`next`](https://npm.im/next) peer dependency to `9.0.3 - 11`.
 - Updated dev dependencies.
+- Added the [`eslint-config-next`](https://npm.im/eslint-config-next) dev dependency for [`next`](https://npm.im/next) v11.
 - Renamed imports in the test index module.
 - Amended the changelog entry for v3.0.0.
 

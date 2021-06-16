@@ -1,6 +1,6 @@
 # next-server-context changelog
 
-## Next
+## 3.0.1
 
 ### Patch
 

@@ -21,7 +21,7 @@ Decorate either the entire [Next.js](https://nextjs.org) app or individual pages
 
 ## Support
 
-- [Node.js](https://nodejs.org): `^12.20 || >= 14.13`
+- [Node.js](https://nodejs.org): `^12.20.0 || ^14.13.1 || >= 16.0.0`
 - [Browsers](https://npm.im/browserslist): `> 0.5%, not OperaMini all, not IE > 0, not dead`
 
 ## API

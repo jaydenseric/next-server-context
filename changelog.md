@@ -1,5 +1,11 @@
 # next-server-context changelog
 
+## Next
+
+### Major
+
+- Updated Node.js support to `^12.20.0 || ^14.13.1 || >= 16.0.0`.
+
 ## 3.0.1
 
 ### Patch

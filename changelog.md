@@ -10,6 +10,7 @@
 ### Patch
 
 - Also run GitHub Actions CI with Node.js v17.
+- Fixed an internal JSDoc type.
 
 ## 3.0.1
 

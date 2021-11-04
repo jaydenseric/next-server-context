@@ -43,7 +43,7 @@
   },
   "browserslist": "Node 12.20 - 13 and Node < 13, Node 14.13.1 - 15 and Node < 15, Node >= 16, > 0.5%, not OperaMini all, not IE > 0, not dead",
   "peerDependencies": {
-    "next": "9.0.3 - 11",
+    "next": "9.0.3 - 12",
     "react": "16.14 - 17"
   },
   "devDependencies": {
@@ -52,7 +52,7 @@
     "esbuild": "^0.13.12",
     "eslint": "^7.32.0",
     "eslint-config-env": "^22.0.0",
-    "eslint-config-next": "^11.1.2",
+    "eslint-config-next": "^12.0.2",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-compat": "^3.13.0",
     "eslint-plugin-import": "^2.25.2",
@@ -63,7 +63,7 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "gzip-size": "^6.0.0",
     "jsdoc-md": "^11.0.2",
-    "next": "^11.1.2",
+    "next": "^12.0.2",
     "node-fetch": "^3.0.0",
     "prettier": "^2.4.1",
     "react": "^17.0.2",

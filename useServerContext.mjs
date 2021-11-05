@@ -7,17 +7,13 @@ import ServerContextContext from './ServerContextContext.mjs';
  * @kind function
  * @name useServerContext
  * @returns {ServerContext|undefined} [Node.js](https://nodejs.org) HTTP server context, or `undefined` if client rendering.
- * @example <caption>Ways to `import`.</caption>
+ * @example <caption>How to `import`.</caption>
  * ```js
- * import { useServerContext } from 'next-server-context';
- * ```
- *
- * ```js
- * import useServerContext from 'next-server-context/public/useServerContext.mjs';
+ * import useServerContext from 'next-server-context/useServerContext.mjs';
  * ```
  * @example <caption>A [React](https://reactjs.org) component that sets the [Next.js](https://nextjs.org) page’s HTTP status code when server side rendered.</caption>
  * ```jsx
- * import useServerContext from 'next-server-context/public/useServerContext.mjs';
+ * import useServerContext from 'next-server-context/useServerContext.mjs';
  *
  * export default function ErrorMissing() {
  *   const serverContext = useServerContext();

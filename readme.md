@@ -39,20 +39,16 @@ A [React](https://reactjs.org) hook to access the [server context](#constant-ser
 
 #### Examples
 
-_Ways to `import`._
+_How to `import`._
 
 > ```js
-> import { useServerContext } from 'next-server-context';
-> ```
->
-> ```js
-> import useServerContext from 'next-server-context/public/useServerContext.mjs';
+> import useServerContext from 'next-server-context/useServerContext.mjs';
 > ```
 
 _A [React](https://reactjs.org) component that sets the [Next.js](https://nextjs.org) page’s HTTP status code when server side rendered._
 
 > ```jsx
-> import useServerContext from 'next-server-context/public/useServerContext.mjs';
+> import useServerContext from 'next-server-context/useServerContext.mjs';
 >
 > export default function ErrorMissing() {
 >   const serverContext = useServerContext();
@@ -80,14 +76,10 @@ A higher-order [React](https://reactjs.org) component to decorate a [Next.js](ht
 
 #### Examples
 
-_Ways to `import`._
+_How to `import`._
 
 > ```js
-> import { withServerContext } from 'next-server-context';
-> ```
->
-> ```js
-> import withServerContext from 'next-server-context/public/withServerContext.mjs';
+> import withServerContext from 'next-server-context/withServerContext.mjs';
 > ```
 
 _A [Next.js](https://nextjs.org) custom `App`._
@@ -95,7 +87,7 @@ _A [Next.js](https://nextjs.org) custom `App`._
 > In `pages/_app.js`:
 >
 > ```jsx
-> import withServerContext from 'next-server-context/public/withServerContext.mjs';
+> import withServerContext from 'next-server-context/withServerContext.mjs';
 > import App from 'next/app';
 >
 > export default withServerContext(App);
@@ -116,14 +108,10 @@ _A [Next.js](https://nextjs.org) custom `App`._
 
 #### Examples
 
-_Ways to `import`._
+_How to `import`._
 
 > ```js
-> import { ServerContextContext } from 'next-server-context';
-> ```
->
-> ```js
-> import ServerContextContext from 'next-server-context/public/ServerContextContext.mjs';
+> import ServerContextContext from 'next-server-context/ServerContextContext.mjs';
 > ```
 
 ---

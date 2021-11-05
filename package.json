@@ -25,13 +25,15 @@
     "mjs"
   ],
   "files": [
-    "public"
+    "ServerContextContext.mjs",
+    "useServerContext.mjs",
+    "withServerContext.mjs"
   ],
   "sideEffects": false,
-  "main": "./public/index.mjs",
   "exports": {
-    ".": "./public/index.mjs",
-    "./public/*": "./public/*",
+    "./ServerContextContext.mjs": "./ServerContextContext.mjs",
+    "./useServerContext.mjs": "./useServerContext.mjs",
+    "./withServerContext.mjs": "./withServerContext.mjs",
     "./package": "./package.json",
     "./package.json": "./package.json"
   },

@@ -1,6 +1,6 @@
 import NextApp from 'next/app.js';
 import { Fragment, jsx, jsxs } from 'react/jsx-runtime.js';
-import withServerContext from '../../../../public/withServerContext.mjs';
+import withServerContext from '../../../../withServerContext.mjs';
 
 function App({ Component, pageProps = {}, appCustomProp }) {
   return jsxs(Fragment, {

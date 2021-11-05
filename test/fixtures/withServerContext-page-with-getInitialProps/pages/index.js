@@ -1,5 +1,5 @@
-import useServerContext from '../../../../public/useServerContext.mjs';
-import withServerContext from '../../../../public/withServerContext.mjs';
+import useServerContext from '../../../../useServerContext.mjs';
+import withServerContext from '../../../../withServerContext.mjs';
 
 function IndexPage({ pageCustomProp }) {
   const serverContext = useServerContext();

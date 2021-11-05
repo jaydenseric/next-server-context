@@ -6,6 +6,9 @@
 
 - Updated Node.js support to `^12.20.0 || ^14.13.1 || >= 16.0.0`.
 - Updated dev dependencies, some of which require newer Node.js versions than previously supported.
+- Public modules are now individually listed in the package `files` and `exports` fields.
+- Removed the package index module; deep imports must be used.
+- Shortened public module deep import paths, removing the `/public/`.
 - The API is now ESM in `.mjs` files instead of CJS in `.js` files, [accessible via `import` but not `require`](https://nodejs.org/dist/latest/docs/api/esm.html#require).
 
 ### Patch
@@ -13,6 +16,8 @@
 - Updated the [`next`](https://npm.im/next) peer dependency to `^12.0.0`.
 - Also run GitHub Actions CI with Node.js v17.
 - Fixed an internal JSDoc type.
+- Test the bundle sizes for public modules individually.
+- Use Node.js `ok` assertions instead of `strictEqual` where possible.
 
 ## 3.0.1
 

@@ -10,19 +10,15 @@ import ServerContextContext from './ServerContextContext.mjs';
  * @name withServerContext
  * @param {object} Component [Next.js](https://nextjs.org) custom `App` or page component.
  * @returns {WithServerContext} Higher-order [React](https://reactjs.org) component.
- * @example <caption>Ways to `import`.</caption>
+ * @example <caption>How to `import`.</caption>
  * ```js
- * import { withServerContext } from 'next-server-context';
- * ```
- *
- * ```js
- * import withServerContext from 'next-server-context/public/withServerContext.mjs';
+ * import withServerContext from 'next-server-context/withServerContext.mjs';
  * ```
  * @example <caption>A [Next.js](https://nextjs.org) custom `App`.</caption>
  * In `pages/_app.js`:
  *
  * ```jsx
- * import withServerContext from 'next-server-context/public/withServerContext.mjs';
+ * import withServerContext from 'next-server-context/withServerContext.mjs';
  * import App from 'next/app';
  *
  * export default withServerContext(App);

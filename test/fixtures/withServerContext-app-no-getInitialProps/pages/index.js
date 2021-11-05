@@ -1,4 +1,4 @@
-import useServerContext from '../../../../public/useServerContext.mjs';
+import useServerContext from '../../../../useServerContext.mjs';
 
 export default function IndexPage() {
   const serverContext = useServerContext();

@@ -1,8 +1,6 @@
-'use strict';
-
-const { default: NextApp } = require('next/app');
-const { jsx } = require('react/jsx-runtime');
-const ServerContextContext = require('./ServerContextContext.js');
+import NextApp from 'next/app.js';
+import JSX from 'react/jsx-runtime.js';
+import ServerContextContext from './ServerContextContext.mjs';
 
 /**
  * A higher-order [React](https://reactjs.org) component to decorate a
@@ -18,27 +16,19 @@ const ServerContextContext = require('./ServerContextContext.js');
  * ```
  *
  * ```js
- * import withServerContext from 'next-server-context/public/withServerContext.js';
- * ```
- * @example <caption>Ways to `require`.</caption>
- * ```js
- * const { withServerContext } = require('next-server-context');
- * ```
- *
- * ```js
- * const withServerContext = require('next-server-context/public/withServerContext.js');
+ * import withServerContext from 'next-server-context/public/withServerContext.mjs';
  * ```
  * @example <caption>A [Next.js](https://nextjs.org) custom `App`.</caption>
  * In `pages/_app.js`:
  *
  * ```jsx
- * import withServerContext from 'next-server-context/public/withServerContext.js';
+ * import withServerContext from 'next-server-context/public/withServerContext.mjs';
  * import App from 'next/app';
  *
  * export default withServerContext(App);
  * ```
  */
-module.exports = function withServerContext(Component) {
+export default function withServerContext(Component) {
   /**
    * [Next.js](https://nextjs.org) custom `App` or page higher-order
    * [React](https://reactjs.org) component.
@@ -50,9 +40,9 @@ module.exports = function withServerContext(Component) {
    * @ignore
    */
   function WithServerContext({ serverContext, ...props }) {
-    return jsx(ServerContextContext.Provider, {
+    return JSX.jsx(ServerContextContext.Provider, {
       value: serverContext,
-      children: jsx(Component, props),
+      children: JSX.jsx(Component, props),
     });
   }
 
@@ -75,7 +65,7 @@ module.exports = function withServerContext(Component) {
     const props = Component.getInitialProps
       ? await Component.getInitialProps(context)
       : isApp
-      ? await NextApp.getInitialProps(context)
+      ? await NextApp.default.getInitialProps(context)
       : {};
 
     if (req)
@@ -92,4 +82,4 @@ module.exports = function withServerContext(Component) {
   };
 
   return WithServerContext;
-};
+}

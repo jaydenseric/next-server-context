@@ -1,7 +1,5 @@
-'use strict';
-
-const useServerContext = require('../../../../public/useServerContext.js');
-const withServerContext = require('../../../../public/withServerContext.js');
+import useServerContext from '../../../../public/useServerContext.mjs';
+import withServerContext from '../../../../public/withServerContext.mjs';
 
 function IndexPage() {
   const serverContext = useServerContext();
@@ -16,4 +14,4 @@ function IndexPage() {
   return requestCustomHeader;
 }
 
-module.exports = withServerContext(IndexPage);
+export default withServerContext(IndexPage);

@@ -1,7 +1,5 @@
-'use strict';
-
-const React = require('react');
-const ServerContextContext = require('./ServerContextContext.js');
+import React from 'react';
+import ServerContextContext from './ServerContextContext.mjs';
 
 /**
  * A [React](https://reactjs.org) hook to access the
@@ -15,19 +13,11 @@ const ServerContextContext = require('./ServerContextContext.js');
  * ```
  *
  * ```js
- * import useServerContext from 'next-server-context/public/useServerContext.js';
- * ```
- * @example <caption>Ways to `require`.</caption>
- * ```js
- * const { useServerContext } = require('next-server-context');
- * ```
- *
- * ```js
- * const useServerContext = require('next-server-context/public/useServerContext.js');
+ * import useServerContext from 'next-server-context/public/useServerContext.mjs';
  * ```
  * @example <caption>A [React](https://reactjs.org) component that sets the [Next.js](https://nextjs.org) page’s HTTP status code when server side rendered.</caption>
  * ```jsx
- * import useServerContext from 'next-server-context/public/useServerContext.js';
+ * import useServerContext from 'next-server-context/public/useServerContext.mjs';
  *
  * export default function ErrorMissing() {
  *   const serverContext = useServerContext();
@@ -41,6 +31,6 @@ const ServerContextContext = require('./ServerContextContext.js');
  * }
  * ```
  */
-module.exports = function useServerContext() {
+export default function useServerContext() {
   return React.useContext(ServerContextContext);
-};
+}

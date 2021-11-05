@@ -1,6 +1,4 @@
-'use strict';
-
-const useServerContext = require('../../../../public/useServerContext.js');
+import useServerContext from '../../../../public/useServerContext.mjs';
 
 function IndexPage({ pageCustomProp }) {
   const serverContext = useServerContext();
@@ -21,4 +19,4 @@ IndexPage.getInitialProps = async () => ({
   pageCustomProp: 'pageCustomProp' + '_value',
 });
 
-module.exports = IndexPage;
+export default IndexPage;

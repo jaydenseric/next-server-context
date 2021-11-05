@@ -1,8 +1,8 @@
 import { strictEqual } from 'assert';
 import { cleanup, renderHook } from '@testing-library/react-hooks/lib/pure.js';
 import { jsx } from 'react/jsx-runtime.js';
-import ServerContextContext from '../../public/ServerContextContext.js';
-import useServerContext from '../../public/useServerContext.js';
+import ServerContextContext from '../../public/ServerContextContext.mjs';
+import useServerContext from '../../public/useServerContext.mjs';
 
 export default (tests) => {
   tests.add('`useServerContext` with server context context missing.', () => {

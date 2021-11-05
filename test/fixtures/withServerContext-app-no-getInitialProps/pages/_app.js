@@ -1,6 +1,4 @@
-'use strict';
+import App from 'next/app.js';
+import withServerContext from '../../../../public/withServerContext.mjs';
 
-const { default: App } = require('next/app');
-const withServerContext = require('../../../../public/withServerContext.js');
-
-module.exports = withServerContext(App);
+export default withServerContext(App);

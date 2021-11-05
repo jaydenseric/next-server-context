@@ -2,7 +2,7 @@ import { strictEqual } from 'assert';
 import { useContext } from 'react';
 import ReactTestRenderer from 'react-test-renderer';
 import { jsx } from 'react/jsx-runtime.js';
-import ServerContextContext from '../../public/ServerContextContext.js';
+import ServerContextContext from '../../public/ServerContextContext.mjs';
 
 export default (tests) => {
   tests.add('`ServerContextContext` used as a React context.', () => {

@@ -6,10 +6,11 @@
 
 - Updated Node.js support to `^12.20.0 || ^14.13.1 || >= 16.0.0`.
 - Updated dev dependencies, some of which require newer Node.js versions than previously supported.
+- The API is now ESM in `.mjs` files instead of CJS in `.js` files, [accessible via `import` but not `require`](https://nodejs.org/dist/latest/docs/api/esm.html#require).
 
 ### Patch
 
-- Updated the [`next`](https://npm.im/next) peer dependency to `9.5 - 12`.
+- Updated the [`next`](https://npm.im/next) peer dependency to `^12.0.0`.
 - Also run GitHub Actions CI with Node.js v17.
 - Fixed an internal JSDoc type.
 

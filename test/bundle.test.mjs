@@ -9,7 +9,7 @@ export default (tests) => {
       outputFiles: [bundle],
     } = await esbuild.build({
       entryPoints: [
-        fileURLToPath(new URL('../public/index.js', import.meta.url)),
+        fileURLToPath(new URL('../public/index.mjs', import.meta.url)),
       ],
       external: ['next', 'react'],
       write: false,

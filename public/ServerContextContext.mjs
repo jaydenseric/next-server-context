@@ -1,6 +1,4 @@
-'use strict';
-
-const React = require('react');
+import React from 'react';
 
 /**
  * [React context object](https://reactjs.org/docs/context#api) for a
@@ -17,15 +15,7 @@ const React = require('react');
  * ```
  *
  * ```js
- * import ServerContextContext from 'next-server-context/public/ServerContextContext.js';
- * ```
- * @example <caption>Ways to `require`.</caption>
- * ```js
- * const { ServerContextContext } = require('next-server-context');
- * ```
- *
- * ```js
- * const ServerContextContext = require('next-server-context/public/ServerContextContext.js');
+ * import ServerContextContext from 'next-server-context/public/ServerContextContext.mjs';
  * ```
  */
 const ServerContextContext = React.createContext();
@@ -41,4 +31,4 @@ if (typeof process === 'object' && process.env.NODE_ENV !== 'production')
    */
   ServerContextContext.displayName = 'ServerContextContext';
 
-module.exports = ServerContextContext;
+export default ServerContextContext;

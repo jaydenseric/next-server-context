@@ -46,23 +46,13 @@ _Ways to `import`._
 > ```
 >
 > ```js
-> import useServerContext from 'next-server-context/public/useServerContext.js';
-> ```
-
-_Ways to `require`._
-
-> ```js
-> const { useServerContext } = require('next-server-context');
-> ```
->
-> ```js
-> const useServerContext = require('next-server-context/public/useServerContext.js');
+> import useServerContext from 'next-server-context/public/useServerContext.mjs';
 > ```
 
 _A [React](https://reactjs.org) component that sets the [Next.js](https://nextjs.org) page’s HTTP status code when server side rendered._
 
 > ```jsx
-> import useServerContext from 'next-server-context/public/useServerContext.js';
+> import useServerContext from 'next-server-context/public/useServerContext.mjs';
 >
 > export default function ErrorMissing() {
 >   const serverContext = useServerContext();
@@ -97,17 +87,7 @@ _Ways to `import`._
 > ```
 >
 > ```js
-> import withServerContext from 'next-server-context/public/withServerContext.js';
-> ```
-
-_Ways to `require`._
-
-> ```js
-> const { withServerContext } = require('next-server-context');
-> ```
->
-> ```js
-> const withServerContext = require('next-server-context/public/withServerContext.js');
+> import withServerContext from 'next-server-context/public/withServerContext.mjs';
 > ```
 
 _A [Next.js](https://nextjs.org) custom `App`._
@@ -115,7 +95,7 @@ _A [Next.js](https://nextjs.org) custom `App`._
 > In `pages/_app.js`:
 >
 > ```jsx
-> import withServerContext from 'next-server-context/public/withServerContext.js';
+> import withServerContext from 'next-server-context/public/withServerContext.mjs';
 > import App from 'next/app';
 >
 > export default withServerContext(App);
@@ -143,17 +123,7 @@ _Ways to `import`._
 > ```
 >
 > ```js
-> import ServerContextContext from 'next-server-context/public/ServerContextContext.js';
-> ```
-
-_Ways to `require`._
-
-> ```js
-> const { ServerContextContext } = require('next-server-context');
-> ```
->
-> ```js
-> const ServerContextContext = require('next-server-context/public/ServerContextContext.js');
+> import ServerContextContext from 'next-server-context/public/ServerContextContext.mjs';
 > ```
 
 ---

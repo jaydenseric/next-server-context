@@ -1,8 +1,6 @@
-'use strict';
-
-const { default: NextApp } = require('next/app');
-const { Fragment, jsx, jsxs } = require('react/jsx-runtime');
-const withServerContext = require('../../../../public/withServerContext.js');
+import NextApp from 'next/app.js';
+import { Fragment, jsx, jsxs } from 'react/jsx-runtime.js';
+import withServerContext from '../../../../public/withServerContext.mjs';
 
 function App({ Component, pageProps = {}, appCustomProp }) {
   return jsxs(Fragment, {
@@ -21,4 +19,4 @@ App.getInitialProps = async (context) => {
   };
 };
 
-module.exports = withServerContext(App);
+export default withServerContext(App);

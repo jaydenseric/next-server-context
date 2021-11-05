@@ -2,9 +2,13 @@
   "extends": ["env"],
   "overrides": [
     {
-      "files": ["test/fixtures/**/*.js"],
+      "files": ["test/fixtures/*/pages/**/*.js"],
+      "parserOptions": {
+        "sourceType": "module"
+      },
       "rules": {
         "jsdoc/require-jsdoc": "off",
+        "node/no-unsupported-features/es-syntax": "off",
         "react/prop-types": "off",
         "react/react-in-jsx-scope": "off"
       }

@@ -10,12 +10,13 @@
 - Removed the package index module; deep imports must be used.
 - Shortened public module deep import paths, removing the `/public/`.
 - The API is now ESM in `.mjs` files instead of CJS in `.js` files, [accessible via `import` but not `require`](https://nodejs.org/dist/latest/docs/api/esm.html#require).
+- Switched back to using `React.createElement` instead of the [the new React JSX runtime](https://reactjs.org/blog/2020/09/22/introducing-the-new-jsx-transform.html).
 
 ### Patch
 
 - Updated the [`next`](https://npm.im/next) peer dependency to `^12.0.0`.
 - Also run GitHub Actions CI with Node.js v17.
-- Fixed an internal JSDoc type.
+- Fixed internal JSDoc types.
 - Test the bundle sizes for public modules individually.
 - Use Node.js `ok` assertions instead of `strictEqual` where possible.
 - Updated the ESLint config.

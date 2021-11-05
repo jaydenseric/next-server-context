@@ -1,6 +1,6 @@
 import { ok, strictEqual } from 'assert';
 import { cleanup, renderHook } from '@testing-library/react-hooks/lib/pure.js';
-import { jsx } from 'react/jsx-runtime.js';
+import React from 'react';
 import ServerContextContext from '../ServerContextContext.mjs';
 import useServerContext from '../useServerContext.mjs';
 import getBundleSize from './getBundleSize.mjs';
@@ -21,10 +21,11 @@ export default (tests) => {
   tests.add('`useServerContext` getting the server context.', () => {
     try {
       const wrapper = ({ serverContext, children }) =>
-        jsx(ServerContextContext.Provider, {
-          value: serverContext,
-          children,
-        });
+        React.createElement(
+          ServerContextContext.Provider,
+          { value: serverContext },
+          children
+        );
 
       const serverContextA = {};
 

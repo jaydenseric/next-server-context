@@ -1,11 +1,14 @@
 import NextApp from 'next/app.js';
-import { Fragment, jsx, jsxs } from 'react/jsx-runtime.js';
+import React from 'react';
 import withServerContext from '../../../../withServerContext.mjs';
 
 function App({ Component, pageProps = {}, appCustomProp }) {
-  return jsxs(Fragment, {
-    children: [appCustomProp, jsx(Component, pageProps)],
-  });
+  return React.createElement(
+    React.Fragment,
+    null,
+    appCustomProp,
+    React.createElement(Component, pageProps)
+  );
 }
 
 App.getInitialProps = async (context) => {

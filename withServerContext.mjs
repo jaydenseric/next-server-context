@@ -1,5 +1,5 @@
 import NextApp from 'next/app.js';
-import JSX from 'react/jsx-runtime.js';
+import React from 'react';
 import ServerContextContext from './ServerContextContext.mjs';
 
 /**
@@ -32,14 +32,15 @@ export default function withServerContext(Component) {
    * @name withServerContext~WithServerContext
    * @param {object} props Props.
    * @param {ServerContext} [props.serverContext] [Node.js](https://nodejs.org) HTTP server context.
-   * @returns {ReactElement} [React](https://reactjs.org) virtual DOM element.
+   * @returns {React.ReactElement} [React](https://reactjs.org) virtual DOM element.
    * @ignore
    */
   function WithServerContext({ serverContext, ...props }) {
-    return JSX.jsx(ServerContextContext.Provider, {
-      value: serverContext,
-      children: JSX.jsx(Component, props),
-    });
+    return React.createElement(
+      ServerContextContext.Provider,
+      { value: serverContext },
+      React.createElement(Component, props)
+    );
   }
 
   if (typeof process === 'object' && process.env.NODE_ENV !== 'production')

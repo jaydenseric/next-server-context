@@ -18,6 +18,7 @@
 - Fixed an internal JSDoc type.
 - Test the bundle sizes for public modules individually.
 - Use Node.js `ok` assertions instead of `strictEqual` where possible.
+- Updated the ESLint config.
 
 ## 3.0.1
 

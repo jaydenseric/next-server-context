@@ -1,8 +1,5 @@
 {
   "extends": ["env"],
-  "rules": {
-    "react/prop-types": "off"
-  },
   "overrides": [
     {
       "files": ["test/fixtures/*/pages/**/*.js"],

@@ -26,6 +26,7 @@
   - Resolves the minified bundle and its gzipped size for debugging in tests.
 - Use Node.js `ok` assertions instead of `strictEqual` where possible.
 - Updated the ESLint config.
+- Removed a redundant prepare step that’s a no-op in current Next.js versions when programmatically starting Next.js in tests.
 - Fixed internal JSDoc types.
 - Configured Prettier option `singleQuote` to the default, `false`.
 - Documentation tweaks.

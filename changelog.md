@@ -16,6 +16,7 @@
 ### Patch
 
 - Also run GitHub Actions CI with Node.js v17.
+- Simplified package scripts.
 - Test the bundle sizes for public modules individually.
 - Use Node.js `ok` assertions instead of `strictEqual` where possible.
 - Updated the ESLint config.

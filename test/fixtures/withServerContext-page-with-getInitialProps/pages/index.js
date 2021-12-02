@@ -1,5 +1,5 @@
-import useServerContext from '../../../../useServerContext.mjs';
-import withServerContext from '../../../../withServerContext.mjs';
+import useServerContext from "../../../../useServerContext.mjs";
+import withServerContext from "../../../../withServerContext.mjs";
 
 function IndexPage({ pageCustomProp }) {
   const serverContext = useServerContext();
@@ -7,7 +7,7 @@ function IndexPage({ pageCustomProp }) {
   let requestCustomHeader = null;
 
   if (serverContext) {
-    requestCustomHeader = serverContext.request.headers['custom-header'];
+    requestCustomHeader = serverContext.request.headers["custom-header"];
     serverContext.response.statusCode = 418;
   }
 
@@ -17,7 +17,7 @@ function IndexPage({ pageCustomProp }) {
 IndexPage.getInitialProps = async () => ({
   // Add the value together so the test assertion that the HTML contains
   // `pageCustomProp_value` will only be true if the value rendered correctly.
-  pageCustomProp: 'pageCustomProp' + '_value',
+  pageCustomProp: "pageCustomProp" + "_value",
 });
 
 export default withServerContext(IndexPage);

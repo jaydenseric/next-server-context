@@ -1,6 +1,6 @@
-import NextApp from 'next/app.js';
-import React from 'react';
-import withServerContext from '../../../../withServerContext.mjs';
+import NextApp from "next/app.js";
+import React from "react";
+import withServerContext from "../../../../withServerContext.mjs";
 
 function App({ Component, pageProps = {}, appCustomProp }) {
   return React.createElement(
@@ -18,7 +18,7 @@ App.getInitialProps = async (context) => {
     ...props,
     // Add the value together so the test assertion that the HTML contains
     // `appCustomProp_value` will only be true if the value rendered correctly.
-    appCustomProp: 'appCustomProp' + '_value',
+    appCustomProp: "appCustomProp" + "_value",
   };
 };
 

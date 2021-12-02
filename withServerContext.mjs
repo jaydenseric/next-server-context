@@ -1,6 +1,6 @@
-import NextApp from 'next/app.js';
-import React from 'react';
-import ServerContextContext from './ServerContextContext.mjs';
+import NextApp from "next/app.js";
+import React from "react";
+import ServerContextContext from "./ServerContextContext.mjs";
 
 /**
  * A higher-order [React](https://reactjs.org) component to decorate a
@@ -12,14 +12,14 @@ import ServerContextContext from './ServerContextContext.mjs';
  * @returns {WithServerContext} Higher-order [React](https://reactjs.org) component.
  * @example <caption>How to `import`.</caption>
  * ```js
- * import withServerContext from 'next-server-context/withServerContext.mjs';
+ * import withServerContext from "next-server-context/withServerContext.mjs";
  * ```
  * @example <caption>A [Next.js](https://nextjs.org) custom `App`.</caption>
  * In `pages/_app.js`:
  *
  * ```jsx
- * import withServerContext from 'next-server-context/withServerContext.mjs';
- * import App from 'next/app';
+ * import withServerContext from "next-server-context/withServerContext.mjs";
+ * import App from "next/app";
  *
  * export default withServerContext(App);
  * ```
@@ -43,7 +43,7 @@ export default function withServerContext(Component) {
     );
   }
 
-  if (typeof process === 'object' && process.env.NODE_ENV !== 'production')
+  if (typeof process === "object" && process.env.NODE_ENV !== "production")
     /**
      * The display name.
      * @kind member
@@ -53,11 +53,11 @@ export default function withServerContext(Component) {
      * @ignore
      */
     WithServerContext.displayName = `withServerContext(${
-      Component.displayName || Component.name || 'Component'
+      Component.displayName || Component.name || "Component"
     })`;
 
   WithServerContext.getInitialProps = async (context) => {
-    const isApp = 'ctx' in context;
+    const isApp = "ctx" in context;
     const { req, res } = isApp ? context.ctx : context;
     const props = Component.getInitialProps
       ? await Component.getInitialProps(context)

@@ -20,6 +20,7 @@
 - Use Node.js `ok` assertions instead of `strictEqual` where possible.
 - Updated the ESLint config.
 - Fixed internal JSDoc types.
+- Configured Prettier option `singleQuote` to the default, `false`.
 
 ## 3.0.1
 

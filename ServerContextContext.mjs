@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 /**
  * [Node.js](https://nodejs.org) HTTP server context.
@@ -20,12 +20,12 @@ import React from 'react';
  * @prop {Function} Consumer [React context consumer component](https://reactjs.org/docs/context#contextconsumer).
  * @example <caption>How to `import`.</caption>
  * ```js
- * import ServerContextContext from 'next-server-context/ServerContextContext.mjs';
+ * import ServerContextContext from "next-server-context/ServerContextContext.mjs";
  * ```
  */
 const ServerContextContext = React.createContext();
 
-if (typeof process === 'object' && process.env.NODE_ENV !== 'production')
+if (typeof process === "object" && process.env.NODE_ENV !== "production")
   /**
    * The display name.
    * @kind member
@@ -34,6 +34,6 @@ if (typeof process === 'object' && process.env.NODE_ENV !== 'production')
    * @see [React display name conventions](https://reactjs.org/docs/higher-order-components.html#convention-wrap-the-display-name-for-easy-debugging).
    * @ignore
    */
-  ServerContextContext.displayName = 'ServerContextContext';
+  ServerContextContext.displayName = "ServerContextContext";
 
 export default ServerContextContext;

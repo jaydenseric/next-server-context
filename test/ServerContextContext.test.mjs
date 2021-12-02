@@ -1,13 +1,13 @@
-import { ok, strictEqual } from 'assert';
-import React from 'react';
-import ReactTestRenderer from 'react-test-renderer';
-import ServerContextContext from '../ServerContextContext.mjs';
-import getBundleSize from './getBundleSize.mjs';
+import { ok, strictEqual } from "assert";
+import React from "react";
+import ReactTestRenderer from "react-test-renderer";
+import ServerContextContext from "../ServerContextContext.mjs";
+import getBundleSize from "./getBundleSize.mjs";
 
 export default (tests) => {
-  tests.add('`ServerContextContext` used as a React context.', () => {
+  tests.add("`ServerContextContext` used as a React context.", () => {
     const TestComponent = () => React.useContext(ServerContextContext);
-    const contextValue = 'a';
+    const contextValue = "a";
     const testRenderer = ReactTestRenderer.create(
       React.createElement(
         ServerContextContext.Provider,
@@ -19,9 +19,9 @@ export default (tests) => {
     strictEqual(testRenderer.toJSON(), contextValue);
   });
 
-  tests.add('`ServerContextContext` bundle size.', async () => {
+  tests.add("`ServerContextContext` bundle size.", async () => {
     const kB = await getBundleSize(
-      new URL('../ServerContextContext.mjs', import.meta.url)
+      new URL("../ServerContextContext.mjs", import.meta.url)
     );
     ok(kB < 0.5);
   });

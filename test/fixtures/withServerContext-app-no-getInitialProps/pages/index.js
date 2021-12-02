@@ -1,4 +1,4 @@
-import useServerContext from '../../../../useServerContext.mjs';
+import useServerContext from "../../../../useServerContext.mjs";
 
 export default function IndexPage() {
   const serverContext = useServerContext();
@@ -6,7 +6,7 @@ export default function IndexPage() {
   let requestCustomHeader = null;
 
   if (serverContext) {
-    requestCustomHeader = serverContext.request.headers['custom-header'];
+    requestCustomHeader = serverContext.request.headers["custom-header"];
     serverContext.response.statusCode = 418;
   }
 

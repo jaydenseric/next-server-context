@@ -75,7 +75,7 @@
     "docs-check": "jsdoc-md -c",
     "eslint": "eslint .",
     "prettier": "prettier -c .",
-    "tests": "NEXT_TELEMETRY_DISABLED=1 coverage-node test/index.mjs",
+    "tests": "NEXT_TELEMETRY_DISABLED=1 coverage-node test.mjs",
     "test": "npm run eslint && npm run prettier && npm run docs-check && npm run tests",
     "prepublishOnly": "npm test"
   }

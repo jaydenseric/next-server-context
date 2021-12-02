@@ -1,8 +1,8 @@
 import { ok, strictEqual } from "assert";
 import React from "react";
 import ReactTestRenderer from "react-test-renderer";
-import ServerContextContext from "../ServerContextContext.mjs";
-import getBundleSize from "./getBundleSize.mjs";
+import ServerContextContext from "./ServerContextContext.mjs";
+import getBundleSize from "./test/getBundleSize.mjs";
 
 export default (tests) => {
   tests.add("`ServerContextContext` used as a React context.", () => {
@@ -21,7 +21,7 @@ export default (tests) => {
 
   tests.add("`ServerContextContext` bundle size.", async () => {
     const kB = await getBundleSize(
-      new URL("../ServerContextContext.mjs", import.meta.url)
+      new URL("./ServerContextContext.mjs", import.meta.url)
     );
     ok(kB < 0.5);
   });

@@ -1,9 +1,9 @@
 import { ok, strictEqual } from "assert";
 import { cleanup, renderHook } from "@testing-library/react-hooks/lib/pure.js";
 import React from "react";
-import ServerContextContext from "../ServerContextContext.mjs";
-import useServerContext from "../useServerContext.mjs";
-import getBundleSize from "./getBundleSize.mjs";
+import ServerContextContext from "./ServerContextContext.mjs";
+import getBundleSize from "./test/getBundleSize.mjs";
+import useServerContext from "./useServerContext.mjs";
 
 export default (tests) => {
   tests.add("`useServerContext` with server context context missing.", () => {
@@ -57,7 +57,7 @@ export default (tests) => {
 
   tests.add("`useServerContext` bundle size.", async () => {
     const kB = await getBundleSize(
-      new URL("../useServerContext.mjs", import.meta.url)
+      new URL("./useServerContext.mjs", import.meta.url)
     );
     ok(kB < 0.5);
   });

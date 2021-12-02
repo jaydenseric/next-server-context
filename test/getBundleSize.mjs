@@ -1,6 +1,6 @@
 import { fileURLToPath } from 'url';
 import esbuild from 'esbuild';
-import gzipSize from 'gzip-size';
+import { gzipSize } from 'gzip-size';
 
 /**
  * Gets the bundle size of a module, using ESBuild.

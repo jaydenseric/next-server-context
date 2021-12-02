@@ -5,6 +5,7 @@
 ### Major
 
 - Updated Node.js support to `^12.20.0 || ^14.13.1 || >= 16.0.0`.
+- Updated the [`next`](https://npm.im/next) peer dependency to `^12.0.0`.
 - Updated dev dependencies, some of which require newer Node.js versions than previously supported.
 - Public modules are now individually listed in the package `files` and `exports` fields.
 - Removed the package main index module; deep imports must be used.
@@ -15,7 +16,6 @@
 ### Patch
 
 - Also run GitHub Actions CI with Node.js v17.
-- Updated the [`next`](https://npm.im/next) peer dependency to `^12.0.0`.
 - Test the bundle sizes for public modules individually.
 - Use Node.js `ok` assertions instead of `strictEqual` where possible.
 - Updated the ESLint config.

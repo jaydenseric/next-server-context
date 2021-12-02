@@ -5,6 +5,13 @@ import ServerContextContext from "./ServerContextContext.mjs";
 import getBundleSize from "./test/getBundleSize.mjs";
 
 export default (tests) => {
+  tests.add("`ServerContextContext` bundle size.", async () => {
+    const kB = await getBundleSize(
+      new URL("./ServerContextContext.mjs", import.meta.url)
+    );
+    ok(kB < 0.5);
+  });
+
   tests.add("`ServerContextContext` used as a React context.", () => {
     const TestComponent = () => React.useContext(ServerContextContext);
     const contextValue = "a";
@@ -17,12 +24,5 @@ export default (tests) => {
     );
 
     strictEqual(testRenderer.toJSON(), contextValue);
-  });
-
-  tests.add("`ServerContextContext` bundle size.", async () => {
-    const kB = await getBundleSize(
-      new URL("./ServerContextContext.mjs", import.meta.url)
-    );
-    ok(kB < 0.5);
   });
 };

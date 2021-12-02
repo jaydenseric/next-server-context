@@ -6,6 +6,13 @@ import getBundleSize from "./test/getBundleSize.mjs";
 import useServerContext from "./useServerContext.mjs";
 
 export default (tests) => {
+  tests.add("`useServerContext` bundle size.", async () => {
+    const kB = await getBundleSize(
+      new URL("./useServerContext.mjs", import.meta.url)
+    );
+    ok(kB < 0.5);
+  });
+
   tests.add("`useServerContext` with server context context missing.", () => {
     try {
       const { result } = renderHook(() => useServerContext());
@@ -53,12 +60,5 @@ export default (tests) => {
     } finally {
       cleanup();
     }
-  });
-
-  tests.add("`useServerContext` bundle size.", async () => {
-    const kB = await getBundleSize(
-      new URL("./useServerContext.mjs", import.meta.url)
-    );
-    ok(kB < 0.5);
   });
 };

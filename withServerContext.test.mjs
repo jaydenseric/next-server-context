@@ -7,6 +7,13 @@ import getBundleSize from "./test/getBundleSize.mjs";
 import startNext from "./test/startNext.mjs";
 
 export default (tests) => {
+  tests.add("`withServerContext` bundle size.", async () => {
+    const kB = await getBundleSize(
+      new URL("./withServerContext.mjs", import.meta.url)
+    );
+    ok(kB < 0.8);
+  });
+
   tests.add(
     "`withServerContext` decorating the app, no `getInitialProps`.",
     async () => {
@@ -165,11 +172,4 @@ export default (tests) => {
       }
     }
   );
-
-  tests.add("`withServerContext` bundle size.", async () => {
-    const kB = await getBundleSize(
-      new URL("./withServerContext.mjs", import.meta.url)
-    );
-    ok(kB < 0.8);
-  });
 };

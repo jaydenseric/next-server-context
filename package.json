@@ -31,11 +31,10 @@
   ],
   "sideEffects": false,
   "exports": {
+    "./package.json": "./package.json",
     "./ServerContextContext.mjs": "./ServerContextContext.mjs",
     "./useServerContext.mjs": "./useServerContext.mjs",
-    "./withServerContext.mjs": "./withServerContext.mjs",
-    "./package": "./package.json",
-    "./package.json": "./package.json"
+    "./withServerContext.mjs": "./withServerContext.mjs"
   },
   "engines": {
     "node": "^12.22.0 || ^14.17.0 || >= 16.0.0"

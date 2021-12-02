@@ -1,17 +1,17 @@
 import { ok, strictEqual } from "assert";
 import { fileURLToPath } from "url";
 import fetch from "node-fetch";
+import assertBundleSize from "./test/assertBundleSize.mjs";
 import execFilePromise from "./test/execFilePromise.mjs";
 import fsPathRemove from "./test/fsPathRemove.mjs";
-import getBundleSize from "./test/getBundleSize.mjs";
 import startNext from "./test/startNext.mjs";
 
 export default (tests) => {
   tests.add("`withServerContext` bundle size.", async () => {
-    const kB = await getBundleSize(
-      new URL("./withServerContext.mjs", import.meta.url)
+    await assertBundleSize(
+      new URL("./withServerContext.mjs", import.meta.url),
+      300
     );
-    ok(kB < 0.8);
   });
 
   tests.add(

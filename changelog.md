@@ -19,6 +19,10 @@
 - Simplified package scripts.
 - Reorganized the test file structure.
 - Test the bundle sizes for public modules individually.
+- Use a new `assertBundleSize` function to assert module bundle size in tests:
+  - Failure message contains details about the bundle size and how much the limit was exceeded.
+  - Errors when the surplus is greater than 25% of the limit, suggesting the limit should be reduced.
+  - Resolves the minified bundle and its gzipped size for debugging in tests.
 - Use Node.js `ok` assertions instead of `strictEqual` where possible.
 - Updated the ESLint config.
 - Fixed internal JSDoc types.

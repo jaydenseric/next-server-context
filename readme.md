@@ -9,7 +9,7 @@ Some uses:
 - Setting the HTTP response status code for the server side rendered page according to [GraphQL](https://graphql.org) query results in components.
 - Isomorphically accessing cookies within components.
 
-## Setup
+## Installation
 
 To install with [npm](https://npmjs.com/get-npm), run:
 
@@ -19,7 +19,7 @@ npm install next-server-context
 
 Decorate either the entire [Next.js](https://nextjs.org) app or individual pages using [`withServerContext`](#function-withservercontext) to be able to use the [`useServerContext`](#function-useservercontext) [React](https://reactjs.org) hook.
 
-## Support
+## Requirements
 
 - [Node.js](https://nodejs.org): `^12.22.0 || ^14.17.0 || >= 16.0.0`
 - [Browsers](https://npm.im/browserslist): `> 0.5%, not OperaMini all, not IE > 0, not dead`
@@ -39,7 +39,7 @@ A [React](https://reactjs.org) hook to access the [server context](#constant-ser
 
 #### Examples
 
-_How to `import`._
+_How to import._
 
 > ```js
 > import useServerContext from "next-server-context/useServerContext.mjs";
@@ -76,7 +76,7 @@ A higher-order [React](https://reactjs.org) component to decorate a [Next.js](ht
 
 #### Examples
 
-_How to `import`._
+_How to import._
 
 > ```js
 > import withServerContext from "next-server-context/withServerContext.mjs";
@@ -108,7 +108,7 @@ _A [Next.js](https://nextjs.org) custom `App`._
 
 #### Examples
 
-_How to `import`._
+_How to import._
 
 > ```js
 > import ServerContextContext from "next-server-context/ServerContextContext.mjs";

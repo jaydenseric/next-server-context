@@ -7,7 +7,7 @@ import ServerContextContext from "./ServerContextContext.mjs";
  * @kind function
  * @name useServerContext
  * @returns {ServerContext|undefined} [Node.js](https://nodejs.org) HTTP server context, or `undefined` if client rendering.
- * @example <caption>How to `import`.</caption>
+ * @example <caption>How to import.</caption>
  * ```js
  * import useServerContext from "next-server-context/useServerContext.mjs";
  * ```

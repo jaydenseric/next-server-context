@@ -18,7 +18,7 @@ import React from "react";
  * @type {object}
  * @prop {Function} Provider [React context provider component](https://reactjs.org/docs/context#contextprovider).
  * @prop {Function} Consumer [React context consumer component](https://reactjs.org/docs/context#contextconsumer).
- * @example <caption>How to `import`.</caption>
+ * @example <caption>How to import.</caption>
  * ```js
  * import ServerContextContext from "next-server-context/ServerContextContext.mjs";
  * ```

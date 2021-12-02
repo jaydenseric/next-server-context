@@ -28,6 +28,7 @@
 - Updated the ESLint config.
 - Fixed internal JSDoc types.
 - Configured Prettier option `singleQuote` to the default, `false`.
+- Documentation tweaks.
 
 ## 3.0.1
 

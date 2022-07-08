@@ -1,6 +1,7 @@
 import { ok, strictEqual } from "assert";
-import { fileURLToPath } from "url";
 import fetch from "node-fetch";
+import { fileURLToPath } from "url";
+
 import assertBundleSize from "./test/assertBundleSize.mjs";
 import execFilePromise from "./test/execFilePromise.mjs";
 import fsPathRemove from "./test/fsPathRemove.mjs";

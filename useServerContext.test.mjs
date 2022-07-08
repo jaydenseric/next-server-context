@@ -1,6 +1,7 @@
-import { strictEqual } from "assert";
 import { cleanup, renderHook } from "@testing-library/react-hooks/lib/pure.js";
+import { strictEqual } from "assert";
 import React from "react";
+
 import ServerContextContext from "./ServerContextContext.mjs";
 import assertBundleSize from "./test/assertBundleSize.mjs";
 import useServerContext from "./useServerContext.mjs";

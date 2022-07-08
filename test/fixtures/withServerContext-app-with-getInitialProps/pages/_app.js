@@ -1,5 +1,6 @@
 import NextApp from "next/app.js";
 import React from "react";
+
 import withServerContext from "../../../../withServerContext.mjs";
 
 function App({ Component, pageProps = {}, appCustomProp }) {

@@ -13,7 +13,7 @@ function App({ Component, pageProps = {}, appCustomProp }) {
 }
 
 App.getInitialProps = async (context) => {
-  const props = await NextApp.getInitialProps(context);
+  const props = await NextApp.default.getInitialProps(context);
 
   return {
     ...props,

@@ -52,7 +52,7 @@ export default function withServerContext(Component) {
      * The display name.
      * @see [React display name conventions](https://reactjs.org/docs/higher-order-components.html#convention-wrap-the-display-name-for-easy-debugging).
      */
-    WithServerContext.displayName = `withServerContext(${
+    WithServerContext.displayName = `WithServerContext(${
       Component.displayName || Component.name || "Component"
     })`;
 

@@ -1,3 +1,7 @@
+// @ts-check
+
+import React from "react";
+
 import useServerContext from "../../../../useServerContext.mjs";
 
 export default function IndexPage() {
@@ -10,5 +14,7 @@ export default function IndexPage() {
     serverContext.response.statusCode = 418;
   }
 
-  return requestCustomHeader;
+  return typeof requestCustomHeader === "string"
+    ? React.createElement("span", null, requestCustomHeader)
+    : null;
 }

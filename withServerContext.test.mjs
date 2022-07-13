@@ -1,3 +1,5 @@
+// @ts-check
+
 import { ok, strictEqual } from "assert";
 import fetch from "node-fetch";
 import { fileURLToPath } from "url";
@@ -7,6 +9,10 @@ import execFilePromise from "./test/execFilePromise.mjs";
 import fsPathRemove from "./test/fsPathRemove.mjs";
 import startNext from "./test/startNext.mjs";
 
+/**
+ * Adds `withServerContext` tests.
+ * @param {import("test-director").default} tests Test director.
+ */
 export default (tests) => {
   tests.add("`withServerContext` bundle size.", async () => {
     await assertBundleSize(

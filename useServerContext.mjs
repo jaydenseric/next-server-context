@@ -1,18 +1,15 @@
+// @ts-check
+
 import React from "react";
 
 import ServerContextContext from "./ServerContextContext.mjs";
 
 /**
- * A [React](https://reactjs.org) hook to access the
- * [server context]{@link ServerContextContext}.
- * @kind function
- * @name useServerContext
- * @returns {ServerContext|undefined} [Node.js](https://nodejs.org) HTTP server context, or `undefined` if client rendering.
- * @example <caption>How to import.</caption>
- * ```js
- * import useServerContext from "next-server-context/useServerContext.mjs";
- * ```
- * @example <caption>A [React](https://reactjs.org) component that sets the [Next.js](https://nextjs.org) page’s HTTP status code when server side rendered.</caption>
+ * React hook to use the {@linkcode ServerContextContext}.
+ * @example
+ * A React component that sets the Next.js page’s HTTP status code when server
+ * side rendered:
+ *
  * ```jsx
  * import useServerContext from "next-server-context/useServerContext.mjs";
  *

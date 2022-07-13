@@ -1,3 +1,5 @@
+// @ts-check
+
 import { cleanup, renderHook } from "@testing-library/react-hooks/lib/pure.js";
 import { strictEqual } from "assert";
 import React from "react";
@@ -6,6 +8,10 @@ import ServerContextContext from "./ServerContextContext.mjs";
 import assertBundleSize from "./test/assertBundleSize.mjs";
 import useServerContext from "./useServerContext.mjs";
 
+/**
+ * Adds `useServerContext` tests.
+ * @param {import("test-director").default} tests Test director.
+ */
 export default (tests) => {
   tests.add("`useServerContext` bundle size.", async () => {
     await assertBundleSize(
@@ -28,17 +34,15 @@ export default (tests) => {
 
   tests.add("`useServerContext` getting the server context.", () => {
     try {
-      const wrapper = ({ serverContext, children }) =>
-        React.createElement(
-          ServerContextContext.Provider,
-          { value: serverContext },
-          children
-        );
-
-      const serverContextA = {};
-
+      const serverContextA =
+        /** @type {import("./ServerContextContext.mjs").ServerContext} */ ({});
       const { result, rerender } = renderHook(() => useServerContext(), {
-        wrapper,
+        wrapper: ({ serverContext, children }) =>
+          React.createElement(
+            ServerContextContext.Provider,
+            { value: serverContext },
+            children
+          ),
         initialProps: {
           serverContext: serverContextA,
         },
@@ -51,7 +55,8 @@ export default (tests) => {
       // The server context shouldn’t change, but it’s good to test the normal
       // React context and hooks behavior anyway.
 
-      const serverContextB = {};
+      const serverContextB =
+        /** @type {import("./ServerContextContext.mjs").ServerContext} */ ({});
 
       rerender({ serverContext: serverContextB });
 

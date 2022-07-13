@@ -1,3 +1,5 @@
+// @ts-check
+
 import TestDirector from "test-director";
 
 import test_ServerContextContext from "./ServerContextContext.test.mjs";

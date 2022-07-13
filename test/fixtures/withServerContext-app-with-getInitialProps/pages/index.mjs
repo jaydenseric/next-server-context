@@ -1,6 +1,11 @@
+// @ts-check
+
+import React from "react";
+
 import useServerContext from "../../../../useServerContext.mjs";
 
-function IndexPage({ pageCustomProp }) {
+/** @type {import("next").NextPage<{ pageCustomProp: string }>} */
+const IndexPage = ({ pageCustomProp }) => {
   const serverContext = useServerContext();
 
   let requestCustomHeader = null;
@@ -10,8 +15,12 @@ function IndexPage({ pageCustomProp }) {
     serverContext.response.statusCode = 418;
   }
 
-  return `${requestCustomHeader} ${pageCustomProp}`;
-}
+  return React.createElement(
+    "span",
+    null,
+    `${requestCustomHeader} ${pageCustomProp}`
+  );
+};
 
 IndexPage.getInitialProps = async () => ({
   // Add the value together so the test assertion that the HTML contains

@@ -18,6 +18,7 @@
 - Removed the [`jsdoc-md`](https://npm.im/jsdoc-md) dev dependency and the package `docs-update` and `docs-check` scripts, replacing the readme “API” section with a manually written “Exports” section.
 - Check TypeScript types via a new package `types` script.
 - Removed the [`@testing-library/react-hooks`](https://npm.im/@testing-library/react-hooks) dev dependency and rewrote React hook tests using [`react-test-renderer`](https://npm.im/react-test-renderer) and a custom React component `ReactHookTest`.
+- Disabled Next.js build ESLint checks for test fixture Next.js projects.
 - Upper-cased the first letter of the display name for the React component that the function `withServerContext` returns.
 - Updated GitHub Actions CI config:
   - Run tests with Node.js v14, v16, v18.

@@ -7,12 +7,17 @@
 - Updated Node.js support to `^14.17.0 || ^16.0.0 || >= 18.0.0`.
 - Implemented TypeScript types via JSDoc comments, fixing [#1](https://github.com/jaydenseric/next-server-context/issues/1).
 
+### Minor
+
+- Updated the [`react`](https://npm.im/react) peer dependency to `16.14 - 18`.
+
 ### Patch
 
 - Updated dev dependencies.
 - Simplified dev dependencies and config for ESLint.
 - Removed the [`jsdoc-md`](https://npm.im/jsdoc-md) dev dependency and the package `docs-update` and `docs-check` scripts, replacing the readme “API” section with a manually written “Exports” section.
 - Check TypeScript types via a new package `types` script.
+- Removed the [`@testing-library/react-hooks`](https://npm.im/@testing-library/react-hooks) dev dependency and rewrote React hook tests using [`react-test-renderer`](https://npm.im/react-test-renderer) and a custom React component `ReactHookTest`.
 - Updated GitHub Actions CI config:
   - Run tests with Node.js v14, v16, v18.
   - Updated `actions/checkout` to v3.

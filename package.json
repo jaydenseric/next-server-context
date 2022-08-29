@@ -1,6 +1,6 @@
 {
   "name": "next-server-context",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "description": "A Next.js App or page decorator, React context object, and React hook to access Node.js HTTP server context when rendering components.",
   "license": "MIT",
   "author": {

@@ -1,12 +1,12 @@
 // @ts-check
 
 import { ok, strictEqual } from "node:assert";
+import { rm } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import fetch from "node-fetch";
 
 import assertBundleSize from "./test/assertBundleSize.mjs";
 import execFilePromise from "./test/execFilePromise.mjs";
-import fsPathRemove from "./test/fsPathRemove.mjs";
 import startNext from "./test/startNext.mjs";
 
 /**
@@ -55,7 +55,10 @@ export default (tests) => {
           close();
         }
       } finally {
-        fsPathRemove(fileURLToPath(new URL(".next", nextProjectUrl)));
+        await rm(new URL(".next", nextProjectUrl), {
+          force: true,
+          recursive: true,
+        });
       }
     }
   );
@@ -96,7 +99,10 @@ export default (tests) => {
           close();
         }
       } finally {
-        fsPathRemove(fileURLToPath(new URL(".next", nextProjectUrl)));
+        await rm(new URL(".next", nextProjectUrl), {
+          force: true,
+          recursive: true,
+        });
       }
     }
   );
@@ -135,7 +141,10 @@ export default (tests) => {
           close();
         }
       } finally {
-        fsPathRemove(fileURLToPath(new URL(".next", nextProjectUrl)));
+        await rm(new URL(".next", nextProjectUrl), {
+          force: true,
+          recursive: true,
+        });
       }
     }
   );
@@ -175,7 +184,10 @@ export default (tests) => {
           close();
         }
       } finally {
-        fsPathRemove(fileURLToPath(new URL(".next", nextProjectUrl)));
+        await rm(new URL(".next", nextProjectUrl), {
+          force: true,
+          recursive: true,
+        });
       }
     }
   );

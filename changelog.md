@@ -6,6 +6,7 @@
 
 - Updated dev dependencies.
 - Use the `node:` URL scheme for Node.js builtin module imports in tests.
+- Replaced the test helper function `fsPathRemove` with the function `rm` from the Node.js builtin module `node:fs/promises`.
 
 ## 5.0.0
 

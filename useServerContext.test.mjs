@@ -1,6 +1,6 @@
 // @ts-check
 
-import { strictEqual } from "assert";
+import { strictEqual } from "node:assert";
 import React from "react";
 import ReactTestRenderer from "react-test-renderer";
 

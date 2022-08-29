@@ -5,9 +5,9 @@ import React from "react";
 /**
  * [Node.js](https://nodejs.org) HTTP server context.
  * @typedef {object} ServerContext
- * @prop {import("http").IncomingMessage} request
+ * @prop {import("node:http").IncomingMessage} request
  *   [Node.js HTTP server request instance](https://nodejs.org/api/http.html#http_class_http_incomingmessage).
- * @prop {import("http").ServerResponse} response
+ * @prop {import("node:http").ServerResponse} response
  *   [Node.js HTTP server response instance](https://nodejs.org/api/http.html#http_class_http_serverresponse).
  */
 

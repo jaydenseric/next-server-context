@@ -1,8 +1,8 @@
 // @ts-check
 
-import { ok, strictEqual } from "assert";
+import { ok, strictEqual } from "node:assert";
+import { fileURLToPath } from "node:url";
 import fetch from "node-fetch";
-import { fileURLToPath } from "url";
 
 import assertBundleSize from "./test/assertBundleSize.mjs";
 import execFilePromise from "./test/execFilePromise.mjs";

@@ -1,5 +1,11 @@
 # next-server-context changelog
 
+## Next
+
+### Patch
+
+- Updated dev dependencies.
+
 ## 5.0.1
 
 ### Patch

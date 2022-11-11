@@ -3,6 +3,7 @@
 import { ok, strictEqual } from "node:assert";
 import { rm } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
+
 import fetch from "node-fetch";
 
 import assertBundleSize from "./test/assertBundleSize.mjs";

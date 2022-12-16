@@ -1,11 +1,10 @@
 // @ts-check
 
 import { createServer } from "node:http";
-import { createRequire } from "node:module";
+
+import next from "next";
 
 import listen from "./listen.mjs";
-
-const require = createRequire(import.meta.url);
 
 /**
  * Starts Next.js.
@@ -14,9 +13,8 @@ const require = createRequire(import.meta.url);
  *   close the server.
  */
 export default async function startNext(dir) {
-  const next = require(require.resolve("next", { paths: [dir] }));
-  const nextServer = next({ dir });
+  const nextServer = next.default({ dir });
   const server = createServer(nextServer.getRequestHandler());
 
-  return listen(server);
+  return await listen(server);
 }

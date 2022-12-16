@@ -1,6 +1,6 @@
 # next-server-context changelog
 
-## Next
+## 5.0.2
 
 ### Patch
 

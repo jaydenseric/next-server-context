@@ -1,9 +1,12 @@
 // @ts-check
 
-import NextApp from "next/app.js";
+import nextApp from "next/app.js";
 import React from "react";
 
+import cjsDefaultImport from "./cjsDefaultImport.mjs";
 import ServerContextContext from "./ServerContextContext.mjs";
+
+const NextApp = cjsDefaultImport(nextApp);
 
 /**
  * Decorates a Next.js custom `App` or page React component, to provide
@@ -62,7 +65,7 @@ export default function withServerContext(Component) {
     const props = Component.getInitialProps
       ? await Component.getInitialProps(context)
       : isApp
-      ? await NextApp.default.getInitialProps(context)
+      ? await NextApp.getInitialProps(context)
       : {};
 
     return req

@@ -5,6 +5,7 @@
 ### Patch
 
 - Updated dev dependencies.
+- Use a new internal helper function `cjsDefaultImport` to normalize the default import value from the CJS module `next/app.js` that has a `default` property, preserving the type for the various ways TypeScript may be configured.
 
 ## 5.0.1
 

@@ -25,6 +25,7 @@
     "mjs"
   ],
   "files": [
+    "cjsDefaultImport.mjs",
     "ServerContextContext.mjs",
     "useServerContext.mjs",
     "withServerContext.mjs"

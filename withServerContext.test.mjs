@@ -18,7 +18,7 @@ export default (tests) => {
   tests.add("`withServerContext` bundle size.", async () => {
     await assertBundleSize(
       new URL("./withServerContext.mjs", import.meta.url),
-      300
+      350
     );
   });
 

@@ -56,6 +56,7 @@
     "coverage-node": "^8.0.0",
     "esbuild": "^0.19.7",
     "eslint": "^8.54.0",
+    "eslint-plugin-optimal-modules": "^1.0.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-simple-import-sort": "^10.0.0",
     "gzip-size": "^7.0.0",

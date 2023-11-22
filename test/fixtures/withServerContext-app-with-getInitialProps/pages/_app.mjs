@@ -17,7 +17,7 @@ const App = ({ Component, pageProps, appCustomProp }) => {
     React.Fragment,
     null,
     appCustomProp,
-    React.createElement(Component, pageProps)
+    React.createElement(Component, pageProps),
   );
 };
 

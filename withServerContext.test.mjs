@@ -18,7 +18,7 @@ export default (tests) => {
   tests.add("`withServerContext` bundle size.", async () => {
     await assertBundleSize(
       new URL("./withServerContext.mjs", import.meta.url),
-      350
+      350,
     );
   });
 
@@ -27,7 +27,7 @@ export default (tests) => {
     async () => {
       const nextProjectUrl = new URL(
         "./test/fixtures/withServerContext-app-no-getInitialProps/",
-        import.meta.url
+        import.meta.url,
       );
       const nextProjectPath = fileURLToPath(nextProjectUrl);
       const buildOutput = await execFilePromise("npx", ["next", "build"], {
@@ -61,7 +61,7 @@ export default (tests) => {
           recursive: true,
         });
       }
-    }
+    },
   );
 
   tests.add(
@@ -69,7 +69,7 @@ export default (tests) => {
     async () => {
       const nextProjectUrl = new URL(
         "./test/fixtures/withServerContext-app-with-getInitialProps/",
-        import.meta.url
+        import.meta.url,
       );
       const nextProjectPath = fileURLToPath(nextProjectUrl);
       const buildOutput = await execFilePromise("npx", ["next", "build"], {
@@ -105,7 +105,7 @@ export default (tests) => {
           recursive: true,
         });
       }
-    }
+    },
   );
 
   tests.add(
@@ -113,7 +113,7 @@ export default (tests) => {
     async () => {
       const nextProjectUrl = new URL(
         "./test/fixtures/withServerContext-page-no-getInitialProps/",
-        import.meta.url
+        import.meta.url,
       );
       const nextProjectPath = fileURLToPath(nextProjectUrl);
       const buildOutput = await execFilePromise("npx", ["next", "build"], {
@@ -147,7 +147,7 @@ export default (tests) => {
           recursive: true,
         });
       }
-    }
+    },
   );
 
   tests.add(
@@ -155,7 +155,7 @@ export default (tests) => {
     async () => {
       const nextProjectUrl = new URL(
         "./test/fixtures/withServerContext-page-with-getInitialProps/",
-        import.meta.url
+        import.meta.url,
       );
       const nextProjectPath = fileURLToPath(nextProjectUrl);
       const buildOutput = await execFilePromise("npx", ["next", "build"], {
@@ -190,6 +190,6 @@ export default (tests) => {
           recursive: true,
         });
       }
-    }
+    },
   );
 };

@@ -18,7 +18,7 @@ export default (tests) => {
   tests.add("`useServerContext` bundle size.", async () => {
     await assertBundleSize(
       new URL("./useServerContext.mjs", import.meta.url),
-      150
+      150,
     );
   });
 
@@ -28,7 +28,7 @@ export default (tests) => {
 
     ReactTestRenderer.act(() => {
       ReactTestRenderer.create(
-        React.createElement(ReactHookTest, { hook: useServerContext, results })
+        React.createElement(ReactHookTest, { hook: useServerContext, results }),
       );
     });
 
@@ -54,8 +54,8 @@ export default (tests) => {
           React.createElement(ReactHookTest, {
             hook: useServerContext,
             results,
-          })
-        )
+          }),
+        ),
       );
     });
 
@@ -80,8 +80,8 @@ export default (tests) => {
           React.createElement(ReactHookTest, {
             hook: useServerContext,
             results,
-          })
-        )
+          }),
+        ),
       );
     });
 

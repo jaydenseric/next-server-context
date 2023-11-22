@@ -46,7 +46,7 @@ export default function withServerContext(Component) {
     return React.createElement(
       ServerContextContext.Provider,
       { value: serverContext },
-      React.createElement(Component, props)
+      React.createElement(Component, props),
     );
   };
 
@@ -65,8 +65,8 @@ export default function withServerContext(Component) {
     const props = Component.getInitialProps
       ? await Component.getInitialProps(context)
       : isApp
-      ? await NextApp.getInitialProps(context)
-      : {};
+        ? await NextApp.getInitialProps(context)
+        : {};
 
     return req
       ? {

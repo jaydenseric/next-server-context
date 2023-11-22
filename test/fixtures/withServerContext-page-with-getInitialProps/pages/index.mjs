@@ -19,7 +19,7 @@ const IndexPage = ({ pageCustomProp }) => {
   return React.createElement(
     "span",
     null,
-    `${requestCustomHeader} ${pageCustomProp}`
+    `${requestCustomHeader} ${pageCustomProp}`,
   );
 };
 

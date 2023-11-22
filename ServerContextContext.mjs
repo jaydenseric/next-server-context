@@ -17,7 +17,7 @@ import React from "react";
  * this directly.
  */
 const ServerContextContext = React.createContext(
-  /** @type {ServerContext | undefined} */ (undefined)
+  /** @type {ServerContext | undefined} */ (undefined),
 );
 
 if (typeof process === "object" && process.env.NODE_ENV !== "production")

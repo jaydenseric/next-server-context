@@ -16,7 +16,7 @@ export default (tests) => {
   tests.add("`ServerContextContext` bundle size.", async () => {
     await assertBundleSize(
       new URL("./ServerContextContext.mjs", import.meta.url),
-      100
+      100,
     );
   });
 
@@ -36,8 +36,8 @@ export default (tests) => {
         React.createElement(
           ServerContextContext.Provider,
           { value },
-          React.createElement(TestComponent)
-        )
+          React.createElement(TestComponent),
+        ),
       );
     });
 

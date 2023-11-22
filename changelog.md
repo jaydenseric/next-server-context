@@ -23,6 +23,7 @@
 - Improved the types for test fixture Next.js config.
 - Improved the test helper function `startNext`.
 - Added tests for the internal function `cjsDefaultImport`.
+- Updated link URLs in the readme.
 
 ## 5.0.2
 

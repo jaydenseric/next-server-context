@@ -1,5 +1,16 @@
 # next-server-context changelog
 
+## Next
+
+### Major
+
+- Updated Node.js support to `^18.17.0 || >=20.4.0`.
+
+### Patch
+
+- Updated GitHub Actions CI config:
+  - Run tests with Node.js v18, v20, v21.
+
 ## 5.0.2
 
 ### Patch

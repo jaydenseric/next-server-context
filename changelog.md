@@ -17,6 +17,7 @@
   - Run tests with Node.js v18, v20, v21.
   - Updated `actions/checkout` to v4.
   - Updated `actions/setup-node` to v4.
+- Improved the types for test fixture Next.js config.
 
 ## 5.0.2
 

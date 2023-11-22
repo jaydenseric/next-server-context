@@ -22,6 +22,7 @@
   - Updated `actions/setup-node` to v4.
 - Improved the types for test fixture Next.js config.
 - Improved the test helper function `startNext`.
+- Added tests for the internal function `cjsDefaultImport`.
 
 ## 5.0.2
 

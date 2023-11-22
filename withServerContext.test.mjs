@@ -2,27 +2,23 @@
 
 import { ok, strictEqual } from "node:assert";
 import { rm } from "node:fs/promises";
+import { describe, it } from "node:test";
 import { fileURLToPath } from "node:url";
 
 import assertBundleSize from "./test/assertBundleSize.mjs";
 import execFilePromise from "./test/execFilePromise.mjs";
 import startNext from "./test/startNext.mjs";
 
-/**
- * Adds `withServerContext` tests.
- * @param {import("test-director").default} tests Test director.
- */
-export default (tests) => {
-  tests.add("`withServerContext` bundle size.", async () => {
+describe("Function `withServerContext`.", { concurrency: true }, () => {
+  it("Bundle size.", async () => {
     await assertBundleSize(
       new URL("./withServerContext.mjs", import.meta.url),
       350,
     );
   });
 
-  tests.add(
-    "`withServerContext` decorating the app, no `getInitialProps`.",
-    async () => {
+  describe("Decorating the app.", { concurrency: true }, () => {
+    it("`getInitialProps` absent.", async () => {
       const nextProjectUrl = new URL(
         "./test/fixtures/withServerContext-app-no-getInitialProps/",
         import.meta.url,
@@ -59,12 +55,9 @@ export default (tests) => {
           recursive: true,
         });
       }
-    },
-  );
+    });
 
-  tests.add(
-    "`withServerContext` decorating the app, with `getInitialProps`.",
-    async () => {
+    it("`getInitialProps` present.", async () => {
       const nextProjectUrl = new URL(
         "./test/fixtures/withServerContext-app-with-getInitialProps/",
         import.meta.url,
@@ -103,12 +96,11 @@ export default (tests) => {
           recursive: true,
         });
       }
-    },
-  );
+    });
+  });
 
-  tests.add(
-    "`withServerContext` decorating a page, no `getInitialProps`.",
-    async () => {
+  describe("Decorating a page.", { concurrency: true }, () => {
+    it("`getInitialProps` absent.", async () => {
       const nextProjectUrl = new URL(
         "./test/fixtures/withServerContext-page-no-getInitialProps/",
         import.meta.url,
@@ -145,12 +137,9 @@ export default (tests) => {
           recursive: true,
         });
       }
-    },
-  );
+    });
 
-  tests.add(
-    "`withServerContext` decorating a page, with `getInitialProps`.",
-    async () => {
+    it("`getInitialProps` present.", async () => {
       const nextProjectUrl = new URL(
         "./test/fixtures/withServerContext-page-with-getInitialProps/",
         import.meta.url,
@@ -188,6 +177,6 @@ export default (tests) => {
           recursive: true,
         });
       }
-    },
-  );
-};
+    });
+  });
+});

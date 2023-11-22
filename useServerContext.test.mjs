@@ -1,6 +1,7 @@
 // @ts-check
 
 import { strictEqual } from "node:assert";
+import { describe, it } from "node:test";
 
 import React from "react";
 import ReactTestRenderer from "react-test-renderer";
@@ -10,19 +11,15 @@ import assertBundleSize from "./test/assertBundleSize.mjs";
 import ReactHookTest from "./test/ReactHookTest.mjs";
 import useServerContext from "./useServerContext.mjs";
 
-/**
- * Adds `useServerContext` tests.
- * @param {import("test-director").default} tests Test director.
- */
-export default (tests) => {
-  tests.add("`useServerContext` bundle size.", async () => {
+describe("Function `useServerContext`.", { concurrency: true }, () => {
+  it("Bundle size.", async () => {
     await assertBundleSize(
       new URL("./useServerContext.mjs", import.meta.url),
       150,
     );
   });
 
-  tests.add("`useServerContext` with server context context missing.", () => {
+  it("Server context context missing.", () => {
     /** @type {Array<unknown>} */
     const results = [];
 
@@ -36,7 +33,7 @@ export default (tests) => {
     strictEqual(results[0], undefined);
   });
 
-  tests.add("`useServerContext` getting the server context.", () => {
+  it("Getting the server context.", () => {
     /** @type {Array<unknown>} */
     const results = [];
 
@@ -88,4 +85,4 @@ export default (tests) => {
     strictEqual(results.length, 2);
     strictEqual(results[1], serverContextB);
   });
-};
+});

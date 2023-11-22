@@ -1,6 +1,7 @@
 // @ts-check
 
 import { strictEqual } from "node:assert";
+import { describe, it } from "node:test";
 
 import React from "react";
 import ReactTestRenderer from "react-test-renderer";
@@ -8,19 +9,15 @@ import ReactTestRenderer from "react-test-renderer";
 import ServerContextContext from "./ServerContextContext.mjs";
 import assertBundleSize from "./test/assertBundleSize.mjs";
 
-/**
- * Adds `ServerContextContext` tests.
- * @param {import("test-director").default} tests Test director.
- */
-export default (tests) => {
-  tests.add("`ServerContextContext` bundle size.", async () => {
+describe("Function `ServerContextContext`.", { concurrency: true }, () => {
+  it("Bundle size.", async () => {
     await assertBundleSize(
       new URL("./ServerContextContext.mjs", import.meta.url),
       100,
     );
   });
 
-  tests.add("`ServerContextContext` used as a React context.", () => {
+  it("Used as a React context.", () => {
     let contextValue;
 
     function TestComponent() {
@@ -43,4 +40,4 @@ export default (tests) => {
 
     strictEqual(contextValue, value);
   });
-};
+});

@@ -1,6 +1,6 @@
 # next-server-context changelog
 
-## Next
+## 6.0.0
 
 ### Major
 

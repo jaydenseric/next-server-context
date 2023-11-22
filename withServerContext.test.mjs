@@ -20,7 +20,7 @@ describe("Function `withServerContext`.", { concurrency: true }, () => {
   describe("Decorating the app.", { concurrency: true }, () => {
     it("`getInitialProps` absent.", async () => {
       const nextProjectUrl = new URL(
-        "./test/fixtures/withServerContext-app-no-getInitialProps/",
+        "./test/fixtures/withServerContext-app-getInitialProps-absent/",
         import.meta.url,
       );
       const nextProjectPath = fileURLToPath(nextProjectUrl);
@@ -59,7 +59,7 @@ describe("Function `withServerContext`.", { concurrency: true }, () => {
 
     it("`getInitialProps` present.", async () => {
       const nextProjectUrl = new URL(
-        "./test/fixtures/withServerContext-app-with-getInitialProps/",
+        "./test/fixtures/withServerContext-app-getInitialProps-present/",
         import.meta.url,
       );
       const nextProjectPath = fileURLToPath(nextProjectUrl);
@@ -102,7 +102,7 @@ describe("Function `withServerContext`.", { concurrency: true }, () => {
   describe("Decorating a page.", { concurrency: true }, () => {
     it("`getInitialProps` absent.", async () => {
       const nextProjectUrl = new URL(
-        "./test/fixtures/withServerContext-page-no-getInitialProps/",
+        "./test/fixtures/withServerContext-page-getInitialProps-absent/",
         import.meta.url,
       );
       const nextProjectPath = fileURLToPath(nextProjectUrl);
@@ -141,7 +141,7 @@ describe("Function `withServerContext`.", { concurrency: true }, () => {
 
     it("`getInitialProps` present.", async () => {
       const nextProjectUrl = new URL(
-        "./test/fixtures/withServerContext-page-with-getInitialProps/",
+        "./test/fixtures/withServerContext-page-getInitialProps-present/",
         import.meta.url,
       );
       const nextProjectPath = fileURLToPath(nextProjectUrl);

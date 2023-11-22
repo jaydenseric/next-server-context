@@ -10,6 +10,7 @@
 
 ### Patch
 
+- Updated the [`next`](https://npm.im/next) peer dependency to `12 - 14`.
 - Updated the `package.json` field `repository` to conform to new npm requirements.
 - Integrated the ESLint plugin [`eslint-plugin-optimal-modules`](https://npm.im/eslint-plugin-optimal-modules).
 - Updated GitHub Actions CI config:
@@ -19,6 +20,7 @@
   - Updated `actions/checkout` to v4.
   - Updated `actions/setup-node` to v4.
 - Improved the types for test fixture Next.js config.
+- Improved the test helper function `startNext`.
 
 ## 5.0.2
 

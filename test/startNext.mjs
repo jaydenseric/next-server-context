@@ -6,6 +6,11 @@ import next from "next";
 
 import listen from "./listen.mjs";
 
+// Workaround broken Next.js types.
+const nextCreateServer = /** @type {import("next").default} */ (
+  /** @type {unknown} */ (next)
+);
+
 /**
  * Starts Next.js.
  * @param {string} dir Next.js project directory path.
@@ -13,8 +18,12 @@ import listen from "./listen.mjs";
  *   close the server.
  */
 export default async function startNext(dir) {
-  const nextServer = next.default({ dir });
-  const server = createServer(nextServer.getRequestHandler());
+  const nextServer = nextCreateServer({ dir });
+  const nextRequestHandler = nextServer.getRequestHandler();
+
+  await nextServer.prepare();
+
+  const server = createServer(nextRequestHandler);
 
   return await listen(server);
 }

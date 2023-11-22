@@ -4,12 +4,11 @@ import { createServer } from "node:http";
 
 import next from "next";
 
+import cjsDefaultImport from "../cjsDefaultImport.mjs";
 import listen from "./listen.mjs";
 
 // Workaround broken Next.js types.
-const nextCreateServer = /** @type {import("next").default} */ (
-  /** @type {unknown} */ (next)
-);
+const nextCreateServer = cjsDefaultImport(next);
 
 /**
  * Starts Next.js.

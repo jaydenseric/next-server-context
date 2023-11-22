@@ -8,7 +8,10 @@
     "email": "me@jaydenseric.com",
     "url": "https://jaydenseric.com"
   },
-  "repository": "github:jaydenseric/next-server-context",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jaydenseric/next-server-context.git"
+  },
   "homepage": "https://github.com/jaydenseric/next-server-context#readme",
   "bugs": "https://github.com/jaydenseric/next-server-context/issues",
   "funding": "https://github.com/sponsors/jaydenseric",
